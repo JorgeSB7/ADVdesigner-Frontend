@@ -1,0 +1,135 @@
+ion-toolbar {
+    // Gradiente
+  --background: rgb(181,36,36); /* Old browsers */
+  --background: -moz-linear-gradient(left,  rgba(181,36,36,1) 0%, rgba(108,0,135,1) 100%); /* FF3.6-15 */
+  --background: -webkit-linear-gradient(left,  rgba(181,36,36,1) 0%,rgba(108,0,135,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  --background: linear-gradient(to right,  rgba(181,36,36,1) 0%,rgba(108,0,135,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b52424', endColorstr='#6c0087',GradientType=1 ); /* IE6-9 */
+}
+  
+.title {
+  font-family: MCoBold;
+  font-size: 35px;
+  color: #f5f7fa;
+  padding-bottom: 11px;
+}
+
+ion-slides {
+  height: 100%;
+  width: 100%;
+}
+
+.img {
+  height: 390px !important;
+  width: 390px !important;
+}
+
+.race {
+  font-family: dum1;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.text {
+  padding-top: 9px;
+  font-size: 14px;
+  color: black;
+}
+
+.box {
+  border-radius: 5% !important;
+  width: 90% !important;
+  height: 90% !important;
+  border: 1px solid rgb(0, 0, 0) !important;
+  padding-top: 10px;
+  padding-right: 13px;
+  padding-left: 13px;
+  padding-bottom: 13px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+
+  --background: none;
+    background-image: url('/assets/imgs/imraces/papyrus.jpg');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+ion-content {
+  --background: none;
+    background-color: rgb(31, 31, 31);
+}
+
+//__________________________________________________________________slide-background
+.fdra {
+  --background: none;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("/assets/imgs/fonraces/mountain.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fhum {
+  --background: none;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("/assets/imgs/fonraces/SunkenRuins.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fena {
+  --background: none;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("/assets/imgs/fonraces/RuggedPrairie.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.felf {
+  --background: none;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("/assets/imgs/fonraces/forest.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fgno {
+  --background: none;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("/assets/imgs/fonraces/FetidHeath.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fsee {
+  --background: none;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("/assets/imgs/fonraces/MysticGate.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fmed {
+  --background: none;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("/assets/imgs/fonraces/WoodedBastion.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fseo {
+  --background: none;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("/assets/imgs/fonraces/TectonicEdge.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ftif {
+  --background: none;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url("/assets/imgs/fonraces/CascadeBluffs.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

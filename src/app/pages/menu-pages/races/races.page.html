@@ -1,0 +1,246 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="custom" style="zoom:1.5"></ion-menu-button>
+    </ion-buttons>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="7" style="text-align:center !important" class="title">
+          <ion-label>{{'races.title' | translate}}</ion-label>
+        </ion-col>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="3" style="text-align:center !important">
+          <ion-button routerLink="/home" style="--border-radius: 100% !important;">
+            <ion-icon name="home" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts">
+
+    <ion-slide class="fdra">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imraces/dragonborn.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="race">DRACÓNIDO</label>
+              <div class="text">El dracónido camina orgulloso a través de un mundo que le recibe lleno de miedo e
+                incomprensión. Modelado por los dioses dracónidos o por los dragones mismos, el dracónido originalmente
+                nacía de huevos de dragón como una raza única, combinando los mejores atributos de los dragones y los
+                humanoides. Nacidos para luchar, son una raza errante de mercenarios, soldados y aventureros.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fhum">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imraces/human.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="race">HUMANO</label>
+              <div class="text">En los registros de la mayoría de los mundos, los humanos son la más joven de las razas
+                comunes. Han llegado comparativamente tarde al mundo y sus vidas son más cortas que las de enanos, elfos
+                y dragones. Y quizá sea precisamente por estas breves existencias por lo que los humanos aspiran a
+                conseguir tanto como sean capaces en los años que se les han concedido.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fena">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imraces/dwarf.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="race">ENANO</label>
+              <div class="text">Los enanos son conocidos por su habilidad en el arte de la guerra, su gran resistencia,
+                su conocimiento de los secretos de la tierra, su dedicación al trabajo y su capacidad para beber
+                cerveza.
+                Los enanos son gente poco dada a las risas o las bromas, y suelen mostrarse recelosos con los
+                desconocidos;
+                sin embargo, se comportan de forma generosa con los que se ganan su confianza.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="felf">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imraces/elf.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="race">ELFO</label>
+              <div class="text">Los elfos son un pueblo mágico de gracia sobrenatural, viviendo en el mundo sin ser del
+                todo
+                parte de él. Circulan libremente por las tierras de los humanos, donde siempre son bienvenidos pero
+                nunca
+                se encuentran como en casa. Son gentes conocidas por su poesía, baile, canto, saber y artes mágicas, y
+                gustan de las cosas cuya belleza sea natural y sencilla.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fgno">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imraces/gnome.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="race">GNOMO</label>
+              <div class="text">Los gnomos son bienvenidos en todas partes como técnicos, alquimistas e inventores, pero
+                muchos de ellos prefieren quedarse entre los suyos, aunque sus habilidades estén muy demandadas. Viven
+                en
+                cómodas madrigueras excavadas bajo colinas onduladas y frondosas. Por lo que respecta a los gnomos,
+                estar
+                vivo es una cosa maravillosa, y exprimen cada gramo de disfrute de sus tres a cinco siglos de vida.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fsee">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imraces/halfelf.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="race">SEMIELFO</label>
+              <div class="text">Caminando entre dos mundos pero sin pertenecer realmente a ninguno de los dos, los
+                semielfos
+                combinan lo que algunos dicen ser las mejores cualidades de sus progenitores humanos y elfos. Valoran
+                tanto la libertad personal como la expresión de la creatividad y no demuestran ni amor por los líderes
+                ni
+                deseo de tener seguidores. Les irritan las reglas y se ofenden ante las exigencias de los demás.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fmed">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imraces/halffling.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="race">MEDIANO</label>
+              <div class="text">Los medianos sobreviven en un mundo lleno de criaturas más grandes evitando ser
+                detectados
+                o, si eso no es posible, evitando los problemas. Como norma general, tienen buen corazón y son amables,
+                odian ver a otros sufrir y no toleran la opresión. También son pacíficos y tradicionales, tienen una
+                fuerte tendencia a apoyar a su comunidad y nunca renuncian a la comodidad de sus costumbres.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fseo">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imraces/halforc.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="race">SEMIORCO</label>
+              <div class="text">Algunos semiorcos crecen para convertirse en jefes orgullosos de tribus orcas, con su
+                sangre
+                humana proveyéndoles de ventaja sobre sus rivales orcos purasangre. Otros se aventuran en el mundo para
+                probar su valía ante los humanos y otras razas más civilizadas. Muchos de estos se convierten en
+                aventureros, cosechando grandeza por sus grandes hazañas y notoriedad por sus costumbres bárbaras y su
+                furia salvaje.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="ftif">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imraces/tiefling.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="race">TIFLIN</label>
+              <div class="text">Ser recibido con miradas y susurros, sufrir violencia e insultos en la calle, ver la
+                desconfianza y el miedo en todos los ojos: este es el destino de los tiflin. Y para retorcer el puñal,
+                los
+                tiflin saben que esto es a causa de un pacto sellado hace generaciones que infundió en su linaje la
+                esencia de Asmodeo, el señor supremo de los Nueve Infiernos. Su apariencia y su naturaleza no tienen más
+                culpa que el resultado de un antiguo pecado.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

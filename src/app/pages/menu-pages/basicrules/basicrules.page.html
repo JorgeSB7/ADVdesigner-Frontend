@@ -1,0 +1,275 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="custom" style="zoom:1.5"></ion-menu-button>
+    </ion-buttons>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="7" style="text-align:center !important" class="title">
+          <ion-label>{{'rules.title' | translate}}</ion-label>
+        </ion-col>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="3" style="text-align:center !important">
+          <ion-button routerLink="/home" style="--border-radius: 100% !important;">
+            <ion-icon name="home" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div id="faq">
+    <ul>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Iniciativa</h2>
+        <p>
+          La iniciativa determina el orden de los turnos durante el combate.
+          Cuando el combate comienza, cada participante hace una tirada
+          de Destreza para determinar su lugar en el orden de iniciativa. El
+          DM hace una tirada por los grupos completos de criaturas
+          idénticas, por lo que cada miembro del grupo actúa al mismo
+          tiempo. Si los jugadores empatan en sus tiradas se deben poner
+          de acuerdo en el orden de actuación.
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Atacar/Conjuros</h2>
+        <p>
+          Cuando realizas un ataque, tu tirada de ataque determina si el ataque impacta o falla. Para realizar una
+          tirada de ataque, lanza un d20 y añade los modificadores apropiados. Si el total de la tirada más los
+          modificadores iguala o excede la Clase de Armadura (CA) del objetivo, el ataque impacta.
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Md-Característica</h2>
+        <p>
+          <strong>Modificador de Característica:</strong> para un arma cuerpo a
+          cuerpo el MdC es la Fuerza. En un arma a distancia es la
+          Destreza. Las armas que posean las propiedades sutileza
+          o arrojadiza rompen esta regla. Algunos conjuros también
+          requieren una tirada de ataque. El modificador de
+          característica usado por un conjuro de ataque depende de
+          la característica de lanzamiento de conjuros del lanzador.
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Bd-Competencia</h2>
+        <p>
+          <strong>Bonificador de Competencia:</strong> añades tu BdC a tu tirada
+          de ataque cuando tu ataque use un arma con la cual eres
+          competente, así como cuando ataques con un conjuro.
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Resultados 1/20</h2>
+        <p>
+          Si la tirada de un d20 para un ataque es de 20, el ataque impacta independientemente de cualquier modificador
+          o
+          de la CA del objetivo. Además, el ataque es un impacto crítico. Si la tirada de un d20 para un ataque es de 1,
+          el
+          ataque falla independientemente de cualquier modificador o la CA del objetivo.
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Golpes Críticos</h2>
+        <p>
+          Cuando logras un golpe crítico, obtienes dados adicionales para el daño del ataque contra el objetivo. Tira
+          todos los dados de daño del ataque dos veces y súmalos. Después añade cualquier modificador relevante como
+          normalmente harías. Por ejemplo, si logras un golpe crítico con una daga, tira 2d4 para el daño, en lugar de
+          1d4, y después añade tu modificador de Característica relevante. Si el ataque implica otro dado de daño, como
+          la característica de Ataque Furtivo del pícaro, también tiras ese daño dos veces.
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Pelea a 2 armas</h2>
+        <p>
+          Cuando realizas una acción de Ataque y atacas con un arma ligera que estás sosteniendo en una mano, puedes
+          utilizar una acción adicional para atacar con un arma ligera diferente de cuerpo a cuerpo que estés
+          sosteniendo con la otra mano. No añades tu modificador de característica al daño del ataque adicional, a menos
+          que dicho modificador sea negativo.
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Tiras de daño</h2>
+        <p>
+          Cada arma, conjuro y habilidad para dañar a un monstruo especifica el daño que hace. Tira el dado/os, añade
+          cualquier modificador y aplica el daño al objetivo. Las armas mágicas, habilidades especiales y otros factores
+          pueden proporcionar un bonificador al daño. Cuando impactas con un arma, añades tu modificador de
+          Característica (el mismo utilizado para la tirada de ataque) al daño. Un conjuro te indica qué dado tirar para
+          el daño y si hay que añadir algún modificador.
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Esquivar</h2>
+        <p>
+          Hasta el comienzo de tu siguiente turno, cualquier tirada de ataque realizada contra ti está en desventaja si
+          puedes ver al atacante, y puedes realizar tiradas de salvación de Des con ventaja. Pierdes este beneficio si
+          estás incapacitado o si tu velocidad se ve reducida a 0.
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Ayudar</h2>
+        <p>
+          Puedes ofrecer tu ayuda a otra criatura para completar una tarea. Cuando realizas esta acción, la criatura a
+          la que ayudas gana ventaja en su siguiente tirada de habilidad, siempre que realice la tirada antes del
+          comienzo de tu siguiente turno. En combate tu ayuda significaría una ventaja en la tirada de ataque.
+        </p>
+      </li>
+      <li>
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Otras acciones</h2>
+        <p>
+          Tu personaje puede realizar acciones como derribar puertas,
+          intimidar enemigos, percibir debilidades en defensas mágicas,
+          solicitar negociar con el enemigo o utilizar un objeto. Cuando
+          describes una acción no detallada en las reglas, el DM te dirá si
+          la acción es posible y qué tipo de tirada necesitas para hacerla,
+          en caso de haberla, para determinar el éxito o el fracaso.
+        </p>
+      </li>
+      <li style="background-color: rgb(255, 242, 206);">
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Tipos de daño</h2>
+        <p>
+          Diferentes ataques, conjuros hirientes y otros efectos dañinos
+          infligen diferentes tipos de daño. Los tipos de daño no tienen
+          reglas por sí mismos, pero otras reglas, como la resistencia al
+          daño, afectan a estos tipos. Los tipos de daño se muestran a
+          continuación, con ejemplos para ayudar al DM a asignar un tipo
+          de daño a un efecto nuevo. Tipos: <strong>ácido</strong>, <strong>contundente</strong>, <strong>frío</strong>,
+          <strong>fuego</strong>, <strong>fuerza</strong> (energía mágica concentrada), <strong>relámpago</strong>,
+          <strong>necrótico</strong>, <strong>perforante</strong>, <strong>veneno</strong>, <strong>psíquico</strong>,
+          <strong>radiante</strong>, <strong>cortante</strong>
+          y <strong>trueno</strong> (ataques sónicos).
+        </p>
+      </li>
+      <li style="background-color: rgb(255, 242, 206);">
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Resistencia/Vulnerabilidad</h2>
+        <p>
+          Si una criatura u objeto tiene resistencia a un tipo de daño, el daño de ese tipo contra él es reducido a la
+          mitad. Si una criatura o un objeto tienen vulnerabilidad a un tipo de daño, el daño de ese tipo contra él se
+          dobla. La resistencia y la vulnerabilidad son aplicadas después de otros modificadores de daño. Múltiples
+          casos de resistencia o vulnerabilidad que afecten al mismo tipo de daño cuentan como un solo caso.
+        </p>
+      </li>
+      <li style="background-color: rgb(255, 242, 206);">
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Cobertura</h2>
+        <p>
+          <strong>Cobertura media:</strong> proporciona un bonificador de
+          +2 a la CA y a las tiradas de salvación de Destreza. Un objetivo tiene CoM si un obstáculo bloquea al menos la
+          mitad de su cuerpo. <strong>Cobertura 3/4:</strong> ofrece un bonificador de +5 a la CA y a las tiradas de
+          salvación de Destreza. Una criatura tiene una Co3/4 si aproximadamente tres cuartos de ella está cubierta por
+          un obstáculo. <strong>Cobertura total:</strong> cuando el objetivo está completamente oculto no puede ser el
+          objetivo directo
+          de un ataque o conjuro (a no ser que incluya un área de efecto).
+        </p>
+      </li>
+      <li style="background-color: rgb(141, 219, 176);">
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Descanso breve</h2>
+        <p>
+          Un descanso breve es un periodo de respiro de al menos una
+          hora de duración, durante el cual un personaje no hace nada
+          más extenuante que comer, beber, leer y atender sus heridas.
+          Un personaje puede usar sus Dados de Golpe (DG) al final de
+          un descanso breve, hasta el número máximo de DG de un
+          personaje, que es igual al nivel de dicho personaje. Por cada
+          DG usado de este modo, el jugador lanza el dado y añade su
+          modificador de Constitución al mismo. El personaje recupera
+          ese total de Puntos de Golpe (PG).
+        </p>
+      </li>
+      <li style="background-color: rgb(141, 219, 176);">
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Descanso largo</h2>
+        <p>
+          Un descanso largo es un periodo de amplio de reposo, de al menos 8 horas de duración, durante el cual un
+          personaje duerme o realiza actividades ligeras: leer, hablar, comer o montar guardia no más de 2 horas. Si el
+          descanso es interrumpido por un periodo de actividad extenuante (al menos 1 hora de andar, luchar, conjurar o
+          actividades aventureras similares), los personajes deben reanudar el descanso otra vez para ganar cualquier
+          beneficio del mismo.
+        </p>
+      </li>
+      <li style="background-color: rgb(141, 219, 176);">
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Beneficios del DL</h2>
+        <p>
+          Al final de un descanso prolongado, un personaje recupera
+          todos los PG perdidos. El personaje además recupera los DG
+          gastados, hasta un número de dados igual a la mitad del
+          número total para ese personaje. Un personaje no puede
+          beneficiarse de más de un descanso prolongado en un periodo
+          de 24 horas, y el personaje debe tener al menos 1 PG al inicio
+          del descanso para ganar sus beneficios.
+        </p>
+      </li>
+      <li style="background-color: rgb(141, 219, 176);">
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Curación</h2>
+        <p>
+          Al realizar una curación los PG de una criatura no pueden
+          exceder sus PG máximos. Es diferente cuando un conjuro o
+          habilidad especial confiere PG temporales a una criatura. Estos
+          se pueden interpretar como una sobrearmadura y sí pueden
+          sobrepasar los PG máximos.
+        </p>
+      </li>
+      <li style="background-color: rgb(141, 219, 176);">
+        <input type="checkbox" checked>
+        <i></i>
+        <h2>Inconsciente/Muerte</h2>
+        <p>
+          <strong>Caer inconsciente:</strong> cuando llegas a 0 PG y no
+          mueres por el daño caes inconsciente. Ahora en cada turno realizas tiradas de salvación de muerte. Lanzas un
+          d20; las tiradas de 10 o más son éxitos, el resto son fallos. Las tiradas se acumulan hasta que se consigan 3
+          éxitos (consigues 1 PG) o 3 fallos (muerte definitiva). El resultado de 20 cura 1 PG automáticamente.
+          <br>
+          <strong>Muerte instantánea:</strong> el daño masivo puede matarte instantáneamente. Cuando el daño reduce a 0
+          tus PG y hay daño restante, mueres si el daño iguala o supera tus PG máximos.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+</ion-content>

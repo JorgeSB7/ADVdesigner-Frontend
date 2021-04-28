@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="custom" style="zoom:1.5"></ion-menu-button>
+    </ion-buttons>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="7" style="text-align:center !important" class="title">
+          <ion-label>{{'settings.title' | translate}}</ion-label>
+        </ion-col>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="3" style="text-align:center !important">
+          <ion-button routerLink="/home" style="--border-radius: 100% !important;">
+            <ion-icon name="home" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- IDIOMAS -->
+
+  <!-- RECARGAR NOTAS -->
+  <ion-refresher slot="fixed" (ionRefresh)="this.cargaDatos($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list style="background-color: rgba(255, 255, 255, 0);">
+
+    <ion-list-header style="color: #0a687f; font-weight: bold; font-size: 15px;">{{'user.title' | translate}}
+    </ion-list-header>
+    <ion-item lines="full"
+      style="font-size: 16px; font-weight: bold; padding: 5px; margin-top: 0; padding-top: 0;  margin-left: 10px; margin-right: 10px;">
+      <ion-avatar class="imgUser" (click)="this.setAvatar()" slot="start">
+        <img [src]="this.user.avatar">
+      </ion-avatar>
+      <div>
+        <ion-label>{{user.name}}</ion-label><br>
+        <ion-label>{{user.email}}</ion-label>
+      </div>
+    </ion-item>
+    <ion-button (click)="this.logout()" expand="block" shape="round" style="color: white; font-weight: bold; --background: #395681; width: 250px; margin-left: 12px;">
+      <ion-icon name="log-out-outline" style="padding-right: 5px; width: 20px; height: 20px;"></ion-icon>
+      {{'cerrar.title' | translate}}
+    </ion-button>
+
+    <ion-list-header style="color: #0a687f; font-weight: bold; font-size: 15px;">{{'Idioma.title' | translate}}
+    </ion-list-header>
+    <ion-item lines="full" style="font-size: 16px; font-weight: bold; margin-left: 14px; margin-right: 14px;">
+      <ion-icon name="language-sharp" style="padding-right: 15px;"></ion-icon>
+      <ion-select placeholder="{{'IdS.title' | translate}} ({{Langselec}})" [(ngModel)]="lang"
+        (ionChange)="changeLng($event)" interface="alert" okText="{{'confirmar.title' | translate}}"
+        cancelText="{{'cancelar.title' | translate}}">
+        <ion-select-option value="es">
+          {{'es.title' | translate}}
+        </ion-select-option>
+        <ion-select-option value="en">
+          {{'en.title' | translate}}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

@@ -1,0 +1,48 @@
+ion-toolbar {
+  height: 165px;
+  --background: rgb(181,36,36); /* Old browsers */
+  --background: -moz-linear-gradient(left,  rgba(181,36,36,1) 0%, rgba(108,0,135,1) 100%); /* FF3.6-15 */
+  --background: -webkit-linear-gradient(left,  rgba(181,36,36,1) 0%,rgba(108,0,135,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  --background: linear-gradient(to right,  rgba(181,36,36,1) 0%,rgba(108,0,135,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b52424', endColorstr='#6c0087',GradientType=1 ); /* IE6-9 */
+}
+
+.my-custom-menu {
+  --width: 260px;
+}
+
+.logo {
+  width: 120px !important;
+  height: 120px !important;
+  color: black;
+}
+
+.imagecol {
+  height: 105px;
+}
+
+.title {
+  font-family: MCoBold;
+  font-size: 30px;
+  color: #d8d4c6;
+}
+
+.MenuText {
+  font-family: dum1;
+  font-weight: bold;
+  color: #383b3d;
+  width: 30px;
+}
+
+.IIspace {
+  margin-bottom: 2px !important;
+  --background: none; 
+  background-color: rgb(202, 206, 209) !important; 
+  opacity: 100;
+}
+
+.Bicon {
+  width: 35px;
+  height: 35px;
+  color: #383b3d;
+}

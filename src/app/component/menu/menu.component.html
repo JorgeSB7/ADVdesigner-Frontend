@@ -1,0 +1,75 @@
+<ion-menu side="start" menuId="custom" contentId="main" type="overlay" class="my-custom-menu" swipeGesture="false">
+  <ion-header style="text-align:center !important" class="ion-no-border">
+    <ion-toolbar class="ion-no-border">
+      <div>
+        <ion-grid>
+          <ion-row>
+            <ion-col class="imagecol">
+              <ion-icon src="assets/imgs/RolGame.svg" class="logo"></ion-icon>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col class="title">
+              ADVdesigner
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content style="--background: none; background-color: #393c41;">
+    <ion-list style="--background: none; background-color: #393c41;">
+
+      <ion-menu-toggle>
+        <!-- HOME -->
+        <ion-item detail lines="none" class="IIspace" routerLink="/home">
+          <ion-icon class="Bicon" slot="start" src="assets/imgs/home.svg"></ion-icon>
+          <ion-label class="MenuText">{{'inicio.title' | translate}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <!-- RACES -->
+        <ion-item detail lines="none" class="IIspace" routerLink="/races">
+          <ion-icon class="Bicon" slot="start" src="assets/imgs/razas.svg"></ion-icon>
+          <ion-label class="MenuText">{{'races.title' | translate}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <!-- CLASSES -->
+        <ion-item detail lines="none" class="IIspace" routerLink="/classes">
+          <ion-icon class="Bicon" slot="start" src="assets/imgs/clases.svg"></ion-icon>
+          <ion-label class="MenuText">{{'classes.title' | translate}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <!-- BASICRULES -->
+        <ion-item detail lines="none" class="IIspace" routerLink="/basicrules">
+          <ion-icon class="Bicon" slot="start" src="assets/imgs/reglas.svg"></ion-icon>
+          <ion-label class="MenuText">{{'rules.title' | translate}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <!-- TOOLS -->
+        <ion-item detail lines="none" class="IIspace" routerLink="/tools">
+          <ion-icon class="Bicon" slot="start" src="assets/imgs/dado.svg"></ion-icon>
+          <ion-label class="MenuText">{{'tools.title' | translate}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <!-- HELP -->
+        <ion-item detail lines="none" class="IIspace" routerLink="/help">
+          <ion-icon class="Bicon" slot="start" name="help-circle-outline"></ion-icon>
+          <ion-label class="MenuText">{{'help.title' | translate}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>

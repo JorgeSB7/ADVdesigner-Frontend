@@ -1,0 +1,197 @@
+ion-toolbar {
+  // Gradiente
+  --background: rgb(181,36,36); /* Old browsers */
+  --background: -moz-linear-gradient(left,  rgba(181,36,36,1) 0%, rgba(108,0,135,1) 100%); /* FF3.6-15 */
+  --background: -webkit-linear-gradient(left,  rgba(181,36,36,1) 0%,rgba(108,0,135,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  --background: linear-gradient(to right,  rgba(181,36,36,1) 0%,rgba(108,0,135,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b52424', endColorstr='#6c0087',GradientType=1 ); /* IE6-9 */
+}
+
+.title {
+  font-family: MCoBold;
+  font-size: 35px;
+  color: #f5f7fa;
+  padding-bottom: 10px;
+}
+
+//____________________________________________________Botones del menú principal
+.BmenuP {
+  float: center;
+  width: 120px !important;
+  height: 120px !important;
+  --border-radius: 15% !important;
+
+  // Gradiente
+  --background: #128eaa; /* Old browsers */
+  --background: -moz-radial-gradient(center, ellipse cover,  #128eaa 0%, #003f51 100%); /* FF3.6-15 */
+  --background: -webkit-radial-gradient(center, ellipse cover,  #128eaa 0%,#003f51 100%); /* Chrome10-25,Safari5.1-6 */
+  --background: radial-gradient(ellipse at center,  #128eaa 0%,#003f51 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#128eaa', endColorstr='#003f51',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.BmenuC {
+  float: center;
+  width: 120px !important;
+  height: 120px !important;
+  --border-radius: 15% !important;
+
+  // Gradiente
+  --background: #966a18; /* Old browsers */
+  --background: -moz-radial-gradient(center, ellipse cover,  #966a18 0%, #682d08 100%); /* FF3.6-15 */
+  --background: -webkit-radial-gradient(center, ellipse cover,  #966a18 0%,#682d08 100%); /* Chrome10-25,Safari5.1-6 */
+  --background: radial-gradient(ellipse at center,  #966a18 0%,#682d08 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#966a18', endColorstr='#682d08',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.BmenuB {
+  float: center;
+  width: 120px !important;
+  height: 120px !important;
+  --border-radius: 15% !important;
+
+  // Gradiente
+  --background: #19a873; /* Old browsers */
+  --background: -moz-radial-gradient(center, ellipse cover,  #19a873 0%, #07663b 100%); /* FF3.6-15 */
+  --background: -webkit-radial-gradient(center, ellipse cover,  #19a873 0%,#07663b 100%); /* Chrome10-25,Safari5.1-6 */
+  --background: radial-gradient(ellipse at center,  #19a873 0%,#07663b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19a873', endColorstr='#07663b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.BmenuCO {
+  float: center;
+  width: 120px !important;
+  height: 120px !important;
+  --border-radius: 15% !important;
+
+  // Gradiente
+  --background: #0316c1; /* Old browsers */
+  --background: -moz-radial-gradient(center, ellipse cover,  #0316c1 0%, #003475 100%); /* FF3.6-15 */
+  --background: -webkit-radial-gradient(center, ellipse cover,  #0316c1 0%,#003475 100%); /* Chrome10-25,Safari5.1-6 */
+  --background: radial-gradient(ellipse at center,  #0316c1 0%,#003475 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0316c1', endColorstr='#003475',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+
+//____________________________________________________Botones del menú principal
+// Iconos dentro de los botones
+.Bicon {
+  width: 100% !important;
+  height: 100% !important;
+  color: #ffffff;
+}
+
+// Títulos de los botones
+.Bname {
+  text-align: center;
+  font-size: 14px;
+  font-family: dum1;
+  font-weight: bold;
+  color: #383b3d;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.fallmenu{
+  border-radius: 5% !important;
+  box-shadow: 0px 8px 15px -10px rgba(0,0,0,0.23);
+  width: 85%;
+  background-color: rgb(238, 242, 245) !important;
+  border: 1px solid black;
+}
+
+.colorMenu {
+  background-color: rgba(255, 255, 255, 0);
+  text-align: center !important;
+}
+
+//____________________________________________________Botones del menú principal - FINAL
+
+.titleT {
+  text-align: center !important;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 14px;
+  padding-left: 13px;
+  padding-right: 13px;
+  text-align: justify;
+  font-weight: bold;
+  color: #383b3d;
+}
+
+.IIspace {
+  padding-bottom: 5px !important;
+}
+
+//____________________________________________________Fondo de HOME
+
+.box {
+  height: 100%;
+  //background-color: rgb(255, 255, 255);
+
+  //background: rgb(181,36,36); /* Old browsers */
+  //background: -moz-linear-gradient(left,  rgba(181,36,36,1) 0%, rgba(108,0,135,1) 100%); /* FF3.6-15 */
+  //background: -webkit-linear-gradient(left,  rgba(181,36,36,1) 0%,rgba(108,0,135,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  //background: linear-gradient(to right,  rgba(181,36,36,1) 0%,rgba(108,0,135,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b52424', endColorstr='#6c0087',GradientType=1 ); /* IE6-9 */
+
+  background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('/assets/imgs/fondoIS.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+//____________________________________________________Fondos slide
+
+.boxP {
+  border-radius: 4% !important;
+  box-shadow: 0px 8px 15px -10px rgba(0,0,0,0.23);
+  width: 100%;
+  background-color: #63060600;
+}
+
+.a1 {
+  width: 99%;
+  height: 100%;
+  border-radius: 4% !important;
+  background-color: rgb(255, 255, 255);
+}
+
+.b2 {
+  width: 99%;
+  height: 100%;
+  border-radius: 4% !important;
+  background: linear-gradient(rgba(255,255,255,0.0),rgba(255,255,255,0.0)),url('/assets/imgs/dd3.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 8px 15px -10px rgba(0,0,0,0.23);
+}
+
+.c3 {
+  width: 99%;
+  height: 100%;
+  border-radius: 4% !important;
+  background: linear-gradient(rgba(255,255,255,0.0),rgba(255,255,255,0.0)),url('/assets/imgs/dd5.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.d4 {
+  width: 99%;
+  height: 100%;
+  border-radius: 4% !important;
+  background: linear-gradient(rgba(255,255,255,0.0),rgba(255,255,255,0.0)),url('/assets/imgs/RD.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+

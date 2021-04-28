@@ -1,0 +1,89 @@
+<ion-header style="text-align:center !important" class="ion-no-border">
+  <ion-toolbar>
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="imagecol" style="display: flex; justify-content: center; align-items: center;">
+            <ion-icon src="assets/imgs/RolGame.svg" class="logo"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="title">
+            ADVdesigner
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="box">
+    <form id="form" [formGroup]="task" (ngSubmit)="this.sendForm()">
+      <ion-grid style="padding-bottom: 0px;">
+        <ion-row style="height: 50px;">
+          <ion-col>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="IS">
+            INICIAR SESIÓN
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="1">
+          </ion-col>
+          <ion-col size="10">
+            <ion-item>
+              <ion-input formControlName="email" placeholder="Email"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="1">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="1">
+          </ion-col>
+          <ion-col size="10">
+            <ion-item>
+              <ion-input formControlName="pass" type="password" placeholder="Password"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="1">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="1">
+          </ion-col>
+          <ion-col size="10">
+            <ion-button type="submit" expand="block" shape="round" style="color: white; font-weight: bold; --background: #395681;">
+              <ion-icon name="log-in-outline" style="padding-right: 5px;"></ion-icon>
+              ACCEDER
+            </ion-button>
+          </ion-col>
+          <ion-col size="1">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+
+    <ion-grid style="padding-top: 0px;">
+      <ion-row>
+        <ion-col size="1">
+        </ion-col>
+        <ion-col size="10">
+          <ion-button routerLink="/newaccount" expand="block" shape="round" style="color: white; font-weight: bold; --background: #395681;">
+            <ion-icon name="shield-checkmark-outline" style="padding-right: 5px;"></ion-icon>
+            REGISTRARSE
+          </ion-button>
+        </ion-col>
+        <ion-col size="1">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

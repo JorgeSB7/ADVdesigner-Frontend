@@ -1,0 +1,60 @@
+ion-toolbar {
+  // Gradiente
+  --background: rgb(18,142,170); /* Old browsers */
+  --background: -moz-linear-gradient(-45deg,  rgba(18,142,170,1) 0%, rgba(0,63,81,1) 100%); /* FF3.6-15 */
+  --background: -webkit-linear-gradient(-45deg,  rgba(18,142,170,1) 0%,rgba(0,63,81,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  --background: linear-gradient(135deg,  rgba(18,142,170,1) 0%,rgba(0,63,81,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#128eaa', endColorstr='#003f51',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.title {
+  font-family: MCoBold;
+  font-size: 35px;
+  color: #f5f7fa;
+  padding-bottom: 11px;
+}
+
+.border1N {
+  border-top: 1px solid #0a687f;
+  border-left: 1px solid #0a687f;
+  text-align: center;
+  padding: 5;
+  font-weight: bold;
+  background-color: rgb(149, 224, 243);
+}
+
+.border2N {
+  border-top: 1px solid #0a687f;
+  border-left: 1px solid #0a687f;
+  border-right: 1px solid #0a687f;
+  text-align: center;
+  padding: 5;
+  font-weight: bold;
+}
+
+.borderA {
+  border: 1px solid #0a687f;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(149, 224, 243);
+}
+
+.borderB {
+  border-top: 1px solid #0a687f;
+  border-bottom: 1px solid #0a687f;
+  text-align: center;
+}
+
+.borderC {
+  border-top: 1px solid #0a687f;
+  border-bottom: 1px solid #0a687f;
+  border-left: 1px solid #0a687f;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(149, 224, 243);
+}
+
+.borderD {
+  border: 1px solid #0a687f;
+  text-align: center;
+}

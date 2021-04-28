@@ -1,0 +1,155 @@
+{
+  "characters": {
+    "title": "CHARACTERS"
+  },
+  "campaigns": {
+    "title": "CAMPAIGNS"
+  },
+  "bestiary": {
+    "title": "BESTIARY"
+  },
+  "magic": {
+    "title": "SPELLS"
+  },
+  "races": {
+    "title": "RACES"
+  },
+  "classes": {
+    "title": "CLASSES"
+  },
+  "rules": {
+    "title": "GAME RULES"
+  },
+  "tools": {
+    "title": "TOOLS"
+  },
+  "help": {
+    "title": "HELP"
+  },
+  "Idioma": {
+    "title": "Language"
+  },
+  "IdS": {
+    "title": "Selected language"
+  },
+  "es": {
+    "title": "Spanish"
+  },
+  "en": {
+    "title": "English"
+  },
+  "cancelar": {
+    "title": "cancel"
+  },
+  "confirmar": {
+    "title": "confirm"
+  },
+  "settings": {
+    "title": "SETTINGS"
+  },
+  "name": {
+    "title": "Name"
+  },
+  "race": {
+    "title": "Race"
+  },
+  "class": {
+    "title": "Class"
+  },
+  "strength": {
+    "title": "Strength"
+  },
+  "dexterity": {
+    "title": "Dexterity"
+  },
+  "constitution": {
+    "title": "Constitution"
+  },
+  "intelligence": {
+    "title": "Intelligence"
+  },
+  "wisdom": {
+    "title": "Wisdom"
+  },
+  "charisma": {
+    "title": "Charisma"
+  },
+  "design": {
+    "title": "DESIGN"
+  },
+  "send": {
+    "title": "SEND"
+  },
+  "mcharacter": {
+    "title": "CHARACTER"
+  },
+  "Mname": {
+    "title": "NAME"
+  },
+  "Mrace": {
+    "title": "RACE"
+  },
+  "Mclass": {
+    "title": "CLASS"
+  },
+  "Mstrength": {
+    "title": "STRENGTH"
+  },
+  "Mdexterity": {
+    "title": "DEXTERITY"
+  },
+  "Mconstitution": {
+    "title": "CONSTITUTION"
+  },
+  "Mintelligence": {
+    "title": "INTELLIGENCE"
+  },
+  "Mwisdom": {
+    "title": "WISDOM"
+  },
+  "Mcharisma": {
+    "title": "CHARISMA"
+  },
+  "tcampaign": {
+    "title": "CAMPAIGN TITLE"
+  },
+  "mcampaign": {
+    "title": "CAMPAIGN"
+  },
+  "description": {
+    "title": "DESCRIPTION"
+  },
+  "DescriptionN": {
+    "title": "Description"
+  },
+  "Ldados": {
+    "title": "THROWING DICE"
+  },
+  "event": {
+    "title": "EVENTS"
+  },
+  "treasure": {
+    "title": "TREASURES"
+  },
+  "user": {
+    "title": "User"
+  },
+  "texthelp": {
+    "title": "is a free web tool that will help you create, customize and manage your rol games. It is compatible with any rol that integrates the system"
+  },
+  "texthelp2": {
+    "title": "You can check any questions or updates through our social networks"
+  },
+  "ddhelp": {
+    "title": "developed and designed by"
+  },
+  "inicio": {
+    "title": "HOME"
+  },
+  "homegame": {
+    "title": "Design your game, live your Adventure"
+  },
+  "cerrar": {
+    "title": "LOG OUT"
+  }
+}

@@ -1,0 +1,307 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="custom" style="zoom:1.5"></ion-menu-button>
+    </ion-buttons>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="7" style="text-align:center !important" class="title">
+          <ion-label>{{'classes.title' | translate}}</ion-label>
+        </ion-col>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="3" style="text-align:center !important">
+          <ion-button routerLink="/home" style="--border-radius: 100% !important;">
+            <ion-icon name="home" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts">
+
+    <ion-slide class="fbrb">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/ibrb.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">BÁRBARO</label>
+              <div class="text">Para algunos, su rabia brota de la comunión con espíritus de animales salvajes. Otros
+                recurren a su hirviente
+                reserva de ira frente a un mundo lleno de dolor. Para los bárbaros, la furia es un poder que no sólo
+                les proporciona un frenesí ciego en la batalla, sino también extraordinarios reflejos, resistencia y
+                proezas de fuerza.
+                <!-- Puede recurrir a su furia unas pocas veces sin descansar, pero por lo general son suficientes
+                para eliminar cualquier amenaza. -->
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fbrd">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/ibrd.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">BARDO</label>
+              <div class="text">Ya sea un erudito, un poeta o un canalla, un bardo teje su magia a través de sus
+                palabras y su música para inspirar a los aliados, desmoralizar a los enemigos, crear
+                ilusiones e incluso sanar heridas. No todos los trovadores en una taberna o los juglares en cortes
+                reales son bardos. Descubrir la magia oculta en la música requiere mucho estudio y de un cierto talento
+                natural.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fbrj">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/ibrj.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">BRUJO</label>
+              <div class="text">Los brujos son buscadores del conocimiento que se encuentra escondido en el multiverso.
+                A través de pactos hechos con seres ancestrales de poder sobrenatural, los brujos desatan efectos
+                mágicos tanto sutiles como espectaculares y recolectan secretos arcanos para potenciar su propio poder.
+                <!-- A menudo complementan su magia con cierta habilidad en el combate
+                cuerpo a cuerpo y con el uso de armaduras ligeras. -->
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fgue">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/igue.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">GUERRERO</label>
+              <div class="text">Todos los guerreros comparten un dominio magistral de las armas y armaduras, y un
+                exhaustivo conocimiento de las habilidades del combate. Además, están muy relacionados con la muerte,
+                tanto repartiéndola como mirándola fijamente, desafiantes. Algunos guerreros sienten la necesidad de
+                usar su entrenamiento como aventureros.
+                <!-- Explorar mazmorras, exterminar monstruos y otras tareas comunes entre el gremio. -->
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fdru">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/idru.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">DRUIDA</label>
+              <div class="text">Ya sea invocando a las fuerzas elementales o emulando a las criaturas del mundo animal,
+                los druidas son la personificación de la resistencia, astucia y furia de la naturaleza. Dicen no tener
+                un dominio sobre la naturaleza. En lugar de eso, se ven como una extensión de la voluntad indomable de
+                la misma.
+                <!-- A menudo custodian lugares sagrados o vigilan zonas vírgenes de la naturaleza manteniendo la
+                paz y el equilibrio. -->
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fcle">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/icle.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">CLÉRIGO</label>
+              <div class="text">Los clérigos son intermediarios entre el mundo mortal y los distantes planos divinos.
+                Tan diferentes entre ellos como los dioses a los que sirven, los clérigos se esfuerzan por personificar
+                las obras de sus deidades. No son sacerdotes ordinarios, pues un clérigo se encuentra imbuido de magia
+                divina.
+                <!-- Combinan sus poderes con un cierto entrenamiento marcial y son capaces de emplear una gran
+                variedad de armas y armaduras. -->
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fmag">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/imag.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">MAGO</label>
+              <div class="text">Los magos son los practicantes supremos de la magia, definidos y unidos como una clase
+                por los hechizos que conjuran. A partir de la sutil onda de la magia que impregna el cosmos, los magos
+                lanzan explosivos hechizos de fuego, arcos voltaicos, sutiles engaños y brutales formas de control
+                mental.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fpal">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/ipal.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">PALADÍN</label>
+              <div class="text">Sean cuales sean sus orígenes y sus misiones, los paladines están unidos por sus
+                juramentos para luchar en contra de las fuerzas del mal. El juramento de un paladín es un lazo muy
+                poderoso. Es una fuente de poder que convierte a un devoto guerrero en un campeón bendecido.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fexp">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/iexp.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">EXPLORADOR</label>
+              <div class="text">Lejos del bullicio de las ciudades y pueblos, más allá de las defensas que mantienen a
+                las granjas más lejanas protegidas de los terrores de la naturaleza, en medio de tupidos bosques sin
+                caminos y a través de enormes y vacías llanuras, los exploradores mantienen su interminable guardia.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fpic">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/ipic.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">PÍCARO</label>
+              <div class="text">Los pícaros confían sus habilidades, el sigilo y las vulnerabilidades de sus oponentes
+                para lograr sacar ventaja en cualquier situación. Tienen un don para encontrar la solución a
+                prácticamente cualquier problema, demostrando ingenio y versatilidad, que es la piedra angular de
+                cualquier buen grupo de aventureros.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fhch">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/ihch.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">HECHICERO</label>
+              <div class="text">Los hechiceros tienen una magia innata, conferida por una línea de sangre exótica, una
+                influencia de otro mundo o la exposición a fuerzas cósmicas desconocidas. Uno no puede estudiar
+                hechicería como quien estudia un lenguaje, más de lo que uno puede aprender a vivir una vida legendaria.
+                Nadie elige la hechicería, el poder elige al hechicero.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="fmon">
+      <ion-grid style="text-align:center !important; height: 100%;">
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <ion-img class="img" src="assets/imgs/imclasses/imon.png"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="height: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="box">
+              <label class="class">MONJE</label>
+              <div class="text">Cualquiera que sea su disciplina, los monjes están unidos por su habilidad para
+                utilizar mágicamente la energía que corre por sus cuerpos. Ya sea canalizada en una impactante
+                demostración de proeza marcial o en el sutil enfoque en la habilidad defensiva y la velocidad, esta
+                energía impulsa todo lo que el monje hace.
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,182 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="3" style="text-align:center !important">
+          <ion-button (click)="this.exit()" style="--border-radius: 100% !important;">
+            <ion-icon name="arrow-undo-outline" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="6" style="text-align:center !important" class="title">
+          <ion-label>{{'mcharacter.title' | translate}}</ion-label>
+        </ion-col>
+
+        <ion-col size="3" style="text-align:center !important">
+          <ion-button (click)="this.generatePDF()" style="--border-radius: 100% !important;">
+            <ion-icon src="assets/imgs/pdf-file.svg" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="box">
+    <ion-grid style="font-size: 12px;">
+
+      <ion-row>
+        <ion-col size="1">
+        </ion-col>
+
+        <ion-col style="width: 100%; height: 100%;" size="10">
+          <div class="borderImg">
+            <ion-thumbnail style="width: 100%; height: 100%; border-radius: 15% !important;">
+              <ion-img src={{this.character.image}}></ion-img>
+            </ion-thumbnail>
+          </div>
+        </ion-col>
+
+        <ion-col size="1">
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="border1N" size="4">
+          {{'Mname.title' | translate}}
+        </ion-col>
+        <ion-col class="border2N" size="8">
+          {{character.namecharacter}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="borderC">
+          {{'Mrace.title' | translate}}
+        </ion-col>
+        <ion-col class="borderE">
+          {{character.race}}
+        </ion-col>
+        <ion-col class="borderE" style="background-color: rgb(149, 224, 243); font-weight: bold;">
+          {{'Mclass.title' | translate}}
+        </ion-col>
+        <ion-col class="borderE">
+          {{character.rolclass}}
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+    <ion-grid style="font-size: 12px;">
+
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col size="9" class="borderA">
+          CARACTERÍSTICA
+        </ion-col>
+        <ion-col size="3" class="borderB">
+          BONUS
+        </ion-col>
+      </ion-row>
+
+      <!-- strength -->
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="borderD" size="2" style="background-color: #3880ff;">
+          <ion-icon class="icons" name="strength" src="assets/imgs/formcha/strength.svg"></ion-icon>        </ion-col>
+        <ion-col class="borderC" size="4">
+          {{'Mstrength.title' | translate}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{character.strength}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{this.fue}}
+        </ion-col>
+      </ion-row>
+
+      <!-- dexterity -->
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="borderD" size="2" style="background-color: #3dc2ff;">
+          <ion-icon class="icons" name="dexterity" src="assets/imgs/formcha/dexterity.svg"></ion-icon>
+        </ion-col>
+        <ion-col class="borderC" size="4">
+          {{'Mdexterity.title' | translate}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{character.dexterity}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{this.des}}
+        </ion-col>
+      </ion-row>
+
+      <!-- constitution -->
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="borderD" size="2" style="background-color: #2dd36f;">
+          <ion-icon class="icons" name="constitution" src="assets/imgs/formcha/constitution.svg"></ion-icon>
+        </ion-col>
+        <ion-col class="borderC" size="4">
+          {{'Mconstitution.title' | translate}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{character.constitution}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{this.con}}
+        </ion-col>
+      </ion-row>
+
+      <!-- intelligence -->
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="borderD" size="2" style="background-color: #f4f5f8;">
+          <ion-icon class="icons" name="intelligence" src="assets/imgs/formcha/intelligence.svg"></ion-icon>
+        </ion-col>
+        <ion-col class="borderC" size="4">
+          {{'Mintelligence.title' | translate}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{character.intelligence}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{this.int}}
+        </ion-col>
+      </ion-row>
+
+      <!-- wisdom -->
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="borderD" size="2" style="background-color: #eb445a;">
+          <ion-icon class="icons" name="wisdom" src="assets/imgs/formcha/wisdom.svg"></ion-icon>
+        </ion-col>
+        <ion-col class="borderC" size="4">
+          {{'Mwisdom.title' | translate}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{character.wisdom}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{this.sab}}
+        </ion-col>
+      </ion-row>
+
+      <!-- charisma -->
+      <ion-row style="padding-right: 7px; padding-left: 7px; justify-content: center; align-items: center;">
+        <ion-col class="borderD" size="2" style="background-color: #ffc409; width: 2em;">
+          <ion-icon class="icons" name="charisma" src="assets/imgs/formcha/charisma.svg"></ion-icon>
+        </ion-col>
+        <ion-col class="borderC" size="4">
+          {{'Mcharisma.title' | translate}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{character.charisma}}
+        </ion-col>
+        <ion-col class="borderE" size="3">
+          {{this.car}}
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+</ion-content>

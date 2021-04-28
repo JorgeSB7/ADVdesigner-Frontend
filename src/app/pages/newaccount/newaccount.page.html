@@ -1,0 +1,84 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="3" style="text-align:center !important">
+          <ion-button routerLink="/login" style="--border-radius: 100% !important;">
+            <ion-icon name="arrow-undo-outline" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="6" style="text-align:center !important" class="title">
+          <ion-label>REGISTRO</ion-label>
+        </ion-col>
+
+        <ion-col size="3" style="text-align:center !important">
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="boxContent">
+
+    <form id="form" [formGroup]="registroForm" (ngSubmit)="this.sendForm()">
+      <ion-grid>
+        <ion-row>
+          <ion-col style="margin-top: 20px;">
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="1">
+          </ion-col>
+          <ion-col size="10" style="text-align: center; color: white; font-size: 20px; font-weight: bold;">
+            CREAR CUENTA <br> <label style="font-size: 14px;">(Todos los campos son obligatorios)</label>
+          </ion-col>
+          <ion-col size="1">
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size="1">
+          </ion-col>
+          <ion-col size="10">
+
+            <ion-item lines="none" class="boxitem">
+              <ion-input formControlName="name" placeholder="Nombre"></ion-input>
+            </ion-item>
+            <p class="alert alert-danger" *ngIf="erroresForm.password">
+              {{ erroresForm.name }}
+            </p>
+            <ion-item lines="none" class="boxitem">
+              <ion-input formControlName="email" id="inputEmail" placeholder="Email" required></ion-input>
+            </ion-item>
+            <p class="alert alert-danger" *ngIf="erroresForm.email">
+              {{ erroresForm.email }}
+            </p>
+            <ion-item lines="none" class="boxitem">
+              <ion-input formControlName="password" id="inputPassword" type="password" placeholder="Contraseña"
+                required></ion-input>
+            </ion-item>
+            <p class="alert alert-danger" *ngIf="erroresForm.password">
+              {{ erroresForm.password }}
+            </p>
+
+            <!--[disabled]="!formBuilder.valid"-->
+            <ion-button [disabled]="!registroForm.valid" type="submit" expand="block" shape="round"
+              style="color: white; font-weight: bold; margin-top: 20px; --background: #395681;">
+              <ion-icon name="checkmark-circle-outline" style="padding-right: 5px;"></ion-icon>CONFIRMAR
+            </ion-button>
+          </ion-col>
+
+          <ion-col size="1">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </div>
+  <p>By pressing 'Join Us' you agree to <br />our terms & conditions.</p>
+</ion-content>

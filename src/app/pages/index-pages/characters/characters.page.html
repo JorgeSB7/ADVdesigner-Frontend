@@ -1,0 +1,103 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="custom" style="zoom:1.5"></ion-menu-button>
+    </ion-buttons>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="7" style="text-align:center !important" class="title">
+          {{'characters.title' | translate}}
+        </ion-col>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="3" style="text-align:center !important">
+          <ion-button routerLink="/home" style="--border-radius: 100% !important;">
+            <ion-icon name="home" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- BUSCAR -->
+  <ion-toolbar>
+    <ion-searchbar #input showCancelButton="focus" debounce="500" (ionChange)="searchCharacter($event)"></ion-searchbar>
+  </ion-toolbar>
+
+  <ion-list>
+    <!-- EDITAR -->
+    <ion-item-sliding *ngFor="let character of personajes">
+      <ion-item-options side="start" (ionSwipe)="editCharacter(character)">
+        <ion-item-option color="primary" (click)="editCharacter(character)">
+          <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+
+      <!-- PERSONAJE -->
+      <ion-item lines="none" (click)="this.seecha(character)">
+        <div style="width: 100%;">
+
+          <ion-grid>
+            <ion-row>
+              <ion-col size="2">
+                <ion-icon name="arrow-forward-circle-outline" style="height: 100%; width: 100%; color: #0a687f;"></ion-icon>
+              </ion-col>
+              <ion-col size="10">
+
+                <ion-grid style="font-size: 12px;">
+                  <ion-row>
+                    <ion-col class="border1N" size="4">
+                      {{'Mname.title' | translate}}
+                    </ion-col>
+                    <ion-col class="border2N" size="8">
+                      {{character.namecharacter}}
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col class="borderA">
+                      {{'Mrace.title' | translate}}
+                    </ion-col>
+                    <ion-col class="borderB">
+                      {{character.race}}
+                    </ion-col>
+                    <ion-col class="borderC">
+                      {{'Mclass.title' | translate}}
+                    </ion-col>
+                    <ion-col class="borderD">
+                      {{character.rolclass}}
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </ion-item>
+
+      <!-- BORRAR -->
+      <ion-item-options side="end" (ionSwipe)="this.presentAlert(character)">
+        <ion-item-option color="danger" (click)="this.presentAlert(character)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <!-- CREAR -->
+  <ion-fab (click)="this.addCharacter()" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon style="width: 100%; height: 100%;" src="assets/imgs/mas.svg"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
