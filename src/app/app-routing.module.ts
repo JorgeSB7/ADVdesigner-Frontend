@@ -68,6 +68,30 @@ const routes: Routes = [
     path: 'tools',
     loadChildren: () => import('./pages/menu-pages/tools/tools.module').then( m => m.ToolsPageModule)
   },
+  {
+    path: 'seebeast',
+    loadChildren: () => import('./pages/index-pages/seebeast/seebeast.module').then( m => m.SeebeastPageModule)
+  },
+  {
+    path: 'seemagic',
+    loadChildren: () => import('./pages/index-pages/seemagic/seemagic.module').then( m => m.SeemagicPageModule)
+  },
+  {
+    path: 'formmagic',
+    loadChildren: () => import('./pages/index-pages/formmagic/formmagic.module').then( m => m.FormmagicPageModule)
+  },
+  {
+    path: 'formbeast',
+    loadChildren: () => import('./pages/index-pages/formbeast/formbeast.module').then( m => m.FormbeastPageModule)
+  },
+  {
+    path: 'beast',
+    loadChildren: () => import('./pages/index-pages/beast/beast.module').then( m => m.BeastPageModule)
+  },
+  {
+    path: 'magic',
+    loadChildren: () => import('./pages/index-pages/magic/magic.module').then( m => m.MagicPageModule)
+  },
 ];
 
 @NgModule({

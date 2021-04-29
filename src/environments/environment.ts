@@ -5,6 +5,8 @@ export const environment = {
   apiCharacter: 'character/',
   apiCampaign: 'campaign/',
   apiCharacterU: 'character/user/',
+  apiBeast: 'beast/',
   apiBeastU: 'beast/user/',
+  apiMagic: 'magic/',
   apiMagicU: 'magic/user/',
 };

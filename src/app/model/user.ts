@@ -1,4 +1,6 @@
+import { beast } from "./beast";
 import { character } from "./character";
+import { magic } from "./magic";
 
 export interface user {
     id?:number,
@@ -6,5 +8,7 @@ export interface user {
     email:string,
     password:string,
     avatar?:string,
-    characters?:character[]
+    characters?:character[],
+    beats?:beast[],
+    magics?:magic[]
 }
