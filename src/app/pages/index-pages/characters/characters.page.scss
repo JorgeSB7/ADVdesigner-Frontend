@@ -11,12 +11,12 @@ ion-toolbar {
   font-family: MCoBold;
   font-size: 35px;
   color: #f5f7fa;
-  padding-bottom: 11px;
+  //padding-bottom: 11px;
 }
 
 .border1N {
-  border-top: 1px solid #0a687f;
-  border-left: 1px solid #0a687f;
+  border-top: 2px solid #0a687f;
+  border-left: 2px solid #0a687f;
   text-align: center;
   padding: 5;
   font-weight: bold;
@@ -24,37 +24,36 @@ ion-toolbar {
 }
 
 .border2N {
-  border-top: 1px solid #0a687f;
-  border-left: 1px solid #0a687f;
-  border-right: 1px solid #0a687f;
+  border-top: 2px solid #0a687f;
+  border-left: 2px solid #0a687f;
+  border-right: 2px solid #0a687f;
   text-align: center;
   padding: 5;
-  font-weight: bold;
 }
 
 .borderA {
-  border: 1px solid #0a687f;
+  border: 2px solid #0a687f;
   text-align: center;
   font-weight: bold;
   background-color: rgb(149, 224, 243);
 }
 
 .borderB {
-  border-top: 1px solid #0a687f;
-  border-bottom: 1px solid #0a687f;
+  border-top: 2px solid #0a687f;
+  border-bottom: 2px solid #0a687f;
   text-align: center;
 }
 
 .borderC {
-  border-top: 1px solid #0a687f;
-  border-bottom: 1px solid #0a687f;
-  border-left: 1px solid #0a687f;
+  border-top: 2px solid #0a687f;
+  border-bottom: 2px solid #0a687f;
+  border-left: 2px solid #0a687f;
   text-align: center;
   font-weight: bold;
   background-color: rgb(149, 224, 243);
 }
 
 .borderD {
-  border: 1px solid #0a687f;
+  border: 2px solid #0a687f;
   text-align: center;
 }

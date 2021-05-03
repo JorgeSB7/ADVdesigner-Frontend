@@ -11,50 +11,50 @@ ion-toolbar {
     font-family: MCoBold;
     font-size: 35px;
     color: #f5f7fa;
-    padding-bottom: 11px;
+    //padding-bottom: 11px;
 }
 
 .border1N {
-    border-top: 1px solid #0a687f;
-    border-left: 1px solid #0a687f;
+    border-top: 2px solid rgb(21, 146, 100);
+    border-left: 2px solid rgb(21, 146, 100);
     text-align: center;
     padding: 5;
     font-weight: bold;
-    background-color: rgb(149, 224, 243);
+    background-color: rgb(66, 248, 182);
 }
   
 .border2N {
-    border-top: 1px solid #0a687f;
-    border-left: 1px solid #0a687f;
-    border-right: 1px solid #0a687f;
+    border-top: 2px solid rgb(21, 146, 100);
+    border-left: 2px solid rgb(21, 146, 100);
+    border-right: 2px solid rgb(21, 146, 100);
     text-align: center;
     padding: 5;
     font-weight: bold;
 }
   
 .borderA {
-    border: 1px solid #0a687f;
+    border: 2px solid rgb(21, 146, 100);
     text-align: center;
     font-weight: bold;
-    background-color: rgb(149, 224, 243);
+    background-color: rgb(66, 248, 182);
 }
   
 .borderB {
-    border-top: 1px solid #0a687f;
-    border-bottom: 1px solid #0a687f;
+    border-top: 2px solid rgb(21, 146, 100);
+    border-bottom: 2px solid rgb(21, 146, 100);
     text-align: center;
 }
   
 .borderC {
-    border-top: 1px solid #0a687f;
-    border-bottom: 1px solid #0a687f;
-    border-left: 1px solid #0a687f;
+    border-top: 2px solid rgb(21, 146, 100);
+    border-bottom: 2px solid rgb(21, 146, 100);
+    border-left: 2px solid rgb(21, 146, 100);
     text-align: center;
     font-weight: bold;
-    background-color: rgb(149, 224, 243);
+    background-color: rgb(66, 248, 182);
 }
   
 .borderD {
-    border: 1px solid #0a687f;
+    border: 2px solid rgb(21, 146, 100);
     text-align: center;
 }

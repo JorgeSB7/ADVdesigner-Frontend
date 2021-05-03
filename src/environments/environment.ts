@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  endpoint: 'https://advdesigner.herokuapp.com/',
+  endpoint: 'https://advendend.herokuapp.com/',
   apiUser: 'user/',
   apiCharacter: 'character/',
   apiCampaign: 'campaign/',

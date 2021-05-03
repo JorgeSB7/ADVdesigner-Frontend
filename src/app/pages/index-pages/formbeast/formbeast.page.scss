@@ -1,0 +1,54 @@
+ion-content {
+    --background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('/assets/imgs/fondoIS.jpg');
+    --background-position: center top;
+    --background-repeat: repeat-y;
+    --background-size: cover;
+}
+
+ion-toolbar {
+    // Gradiente
+    --background: rgb(25,168,115); /* Old browsers */
+    --background: -moz-linear-gradient(-45deg,  rgba(25,168,115,1) 0%, rgba(7,102,59,1) 100%); /* FF3.6-15 */
+    --background: -webkit-linear-gradient(-45deg,  rgba(25,168,115,1) 0%,rgba(7,102,59,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    --background: linear-gradient(135deg,  rgba(25,168,115,1) 0%,rgba(7,102,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19a873', endColorstr='#07663b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+  
+.title {
+    font-family: MCoBold;
+    font-size: 35px;
+    color: #f5f7fa;
+    padding-bottom: 11px;
+}
+
+.borderA {
+    border: 2px solid rgb(21, 146, 100);
+}
+
+.borderB {
+    border-left: 2px solid rgb(21, 146, 100);
+    border-right: 2px solid rgb(21, 146, 100);
+    border-bottom: 2px solid rgb(21, 146, 100);
+}
+
+.borderC {
+    border-right: 2px solid rgb(21, 146, 100);
+    border-bottom: 2px solid rgb(21, 146, 100);
+}
+
+.borderD {
+    border-left: 2px solid rgb(21, 146, 100);
+    border-right: 2px solid rgb(21, 146, 100);
+    border-bottom: 2px solid rgb(21, 146, 100);
+}
+
+.borderImg {
+    height: 15em !important;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.4)),url('/assets/imgs/galleryf.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+

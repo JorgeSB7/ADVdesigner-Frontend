@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { MagicPageRoutingModule } from './magic-routing.module';
 
 import { MagicPage } from './magic.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    MagicPageRoutingModule
+    MagicPageRoutingModule,
+    TranslateModule
   ],
   declarations: [MagicPage]
 })

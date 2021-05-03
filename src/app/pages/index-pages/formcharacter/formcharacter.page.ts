@@ -46,7 +46,6 @@ export class FormcharacterPage {
         charisma: 0,
         creator: this.authS.getUser()
       };
-
     }
 
     this.form = this.formBuilder.group({

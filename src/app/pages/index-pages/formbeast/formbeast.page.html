@@ -1,9 +1,129 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>formbeast</ion-title>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="3" style="text-align:center !important">
+          <ion-button (click)="dismiss()" style="--border-radius: 100% !important;">
+            <ion-icon name="arrow-undo-outline" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="6" style="text-align:center !important" class="title">
+          <ion-label>{{'design.title' | translate}}</ion-label>
+        </ion-col>
+
+        <ion-col size="3" style="text-align:center !important">
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+  <form [formGroup]="form" (ngSubmit)="submitForm()">
+    <ion-input type="hidden" formControlName="codeb"></ion-input>
+
+    <ion-grid style="margin: auto; text-align: center;">
+
+      <ion-row>
+        <ion-col size="2">
+        </ion-col>
+        <!-- image -->
+        <ion-col style="width: 100%; height: 100%;" size="8">
+          <div style="background-color: white;">
+            <div class="borderImg">
+              <ion-thumbnail (click)="this.setImg()" style="width: 100%; height: 100%; border-radius: 15% !important;">
+                <ion-img src={{this.beast.imageb}}></ion-img>
+              </ion-thumbnail>
+            </div>
+          </div>
+        </ion-col>
+
+        <ion-col size="2">
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="borderA">
+          <!-- namebeast -->
+          <ion-item lines="none">
+            <ion-label position="floating">{{'name.title' | translate}}</ion-label>
+            <ion-input type="text" formControlName="namebeast"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="borderB">
+          <!-- type -->
+          <ion-item lines="none">
+            <ion-label position="floating">{{'tipo.title' | translate}}</ion-label>
+            <ion-select value="type" okText="{{'confirmar.title' | translate}}"
+              cancelText="{{'cancelar.title' | translate}}" formControlName="type" interface="alert">
+              <ion-select-option value="Aberración">Aberración</ion-select-option>
+              <ion-select-option value="Bestia">Bestia</ion-select-option>
+              <ion-select-option value="Celestial">Celestial</ion-select-option>
+              <ion-select-option value="Cieno">Cieno</ion-select-option>
+              <ion-select-option value="Constructo">Constructo</ion-select-option>
+              <ion-select-option value="Infernal">Infernal</ion-select-option>
+              <ion-select-option value="Dragón">Dragón</ion-select-option>
+              <ion-select-option value="Elemental">Elemental</ion-select-option>
+              <ion-select-option value="Ejambre">Ejambre</ion-select-option>
+              <ion-select-option value="Fata">Fata</ion-select-option>
+              <ion-select-option value="Gigante">Gigante</ion-select-option>
+              <ion-select-option value="Humanoide">Humanoide</ion-select-option>
+              <ion-select-option value="Monstruosidad">Monstruosidad</ion-select-option>
+              <ion-select-option value="No muerto">No muerto</ion-select-option>
+              <ion-select-option value="Planta">Planta</ion-select-option>
+              <ion-select-option value="Otro">Otro</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="borderB">
+          <!-- power -->
+          <ion-item lines="none">
+            <ion-label position="floating">{{'power.title' | translate}}</ion-label>
+            <ion-input type="text" formControlName="power" type="tel" maxlength="5"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col class="borderC">
+          <!-- life -->
+          <ion-item lines="none">
+            <ion-label position="floating">{{'life.title' | translate}}</ion-label>
+            <ion-input type="text" formControlName="life" type="tel" maxlength="5"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col class="borderD">
+          <!-- lore -->
+          <ion-item lines="none" style="height: 100%;">
+            <ion-label position="floating">{{'DescriptionN.title' | translate}}</ion-label>
+            <ion-textarea style="height: auto;" rows="8" cols="20" type="text" formControlName="lore"></ion-textarea>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-top: 7px;">
+        <ion-col size="1"></ion-col>
+        <ion-col size="10">
+          <ion-button [disabled]="!this.form.valid" type="submit" shape="round" expand="block"
+            style="color: white; font-weight: bold; --background: #395681;">
+            <ion-icon name="save-outline" style="padding-right: 5px;"></ion-icon>
+            {{'send.title' | translate}}
+          </ion-button>
+        </ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
 
 </ion-content>

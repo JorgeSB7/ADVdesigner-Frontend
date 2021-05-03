@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 import { ModalController } from '@ionic/angular';
 import { campaign } from 'src/app/model/campaign';
+import { AuthService } from 'src/app/services/auth.service';
 import { ReadService } from 'src/app/services/read.service';
 
 @Component({
@@ -11,11 +12,15 @@ import { ReadService } from 'src/app/services/read.service';
 })
 export class SeecampaignPage implements OnInit {
   @Input("campaign") campaign: campaign;
-  text: string;
+  private text: string;
+  private iduser = this.auth.getUser().id;
 
-  constructor(private modalController: ModalController, private readh: ReadService) { }
+  constructor(private modalController: ModalController, private readh: ReadService,
+    private auth: AuthService) { }
 
   ngOnInit() {
+    console.log(this.iduser);
+    console.log(this.campaign.contras);
   }
 
   public exit() {

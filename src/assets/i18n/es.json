@@ -151,5 +151,35 @@
       },
       "cerrar": {
         "title": "CERRAR SESIÓN"
+      },
+      "nivel": {
+        "title": "Nivel"
+      },
+      "tipo": {
+        "title": "Tipo"
+      },
+      "Nivel": {
+        "title": "NIVEL"
+      },
+      "Tipo": {
+        "title": "TIPO"
+      },
+      "mmagic": {
+        "title": "CONJURO"
+      },
+      "mbeast": {
+        "title": "BESTIA"
+      },
+      "power": {
+        "title": "Poder"
+      },
+      "life": {
+        "title": "Vida"
+      },
+      "Power": {
+        "title": "PODER"
+      },
+      "Life": {
+        "title": "VIDA"
       }
   }

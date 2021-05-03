@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { AlertController, IonSearchbar } from '@ionic/angular';
 import { campaign } from 'src/app/model/campaign';
 import { ApiCampaignService } from 'src/app/services/api-campaign.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { UiService } from 'src/app/services/ui.service';
 import { FormcampaignPage } from '../formcampaign/formcampaign.page';
 
@@ -11,12 +12,15 @@ import { FormcampaignPage } from '../formcampaign/formcampaign.page';
   styleUrls: ['./campaigns.page.scss'],
 })
 export class CampaignsPage implements OnInit {
-  public campanias: Array<campaign>;
-  @ViewChild('input', {static: false}) myInput: IonSearchbar ;
+  private campanias: Array<campaign>;
+  private iduser = this.auth.getUser().id;
+  @ViewChild('input', {static: false}) myInput: IonSearchbar;
+  
 
   constructor(private apiCam:ApiCampaignService,
     private ui:UiService,
-    private alertController: AlertController) { }
+    private alertController: AlertController,
+    private auth: AuthService) { }
 
   ngOnInit() {
   }
@@ -74,13 +78,13 @@ export class CampaignsPage implements OnInit {
 
   //________________________________________________addCampaign
   public async addCampaign() {
-    const campaignToBeUpdated = await this.ui.showModal(FormcampaignPage, { campaign: {} });
-    console.log(campaignToBeUpdated);
+    const campaignToBeAdd = await this.ui.showModal(FormcampaignPage, { campaign: {} });
+    console.log(campaignToBeAdd);
     try {
-      if (campaignToBeUpdated.data) {
+      if (campaignToBeAdd.data) {
         // si no cierra
         await this.ui.showLoading();
-        await this.apiCam.createCampaign(campaignToBeUpdated.data);
+        await this.apiCam.createCampaign(campaignToBeAdd.data);
         await this.loadAll();
       }
     } catch (err) {

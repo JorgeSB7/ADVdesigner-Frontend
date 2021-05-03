@@ -16,7 +16,7 @@ export class ApiMagicService {
     private modalController: ModalController) { }
 
   // http://localhost:8080/magic/user/id
-  public getMagic(codem?:number | string): Promise<magic[] | null> {
+  public getMagic(codem?: number | string): Promise<magic[] | null> {
     return new Promise((resolve, reject) => {
       let endpoint = environment.endpoint + environment.apiMagicU + this.authS.getUser().id;
       if (codem) {
@@ -40,7 +40,7 @@ export class ApiMagicService {
    * @param codem si no está presente realizará un getAll -> http://localhost:8080/magic
    * , si existe realizará una selección por codem -> http://localhost:8080/magic/codem
    */
-  public getMagicA(codem?:number | string): Promise<magic[] | null> {
+  public getMagicA(codem?: number | string): Promise<magic[] | null> {
     return new Promise((resolve, reject) => {
       let endpoint = environment.endpoint + environment.apiMagic;
       if (codem) {

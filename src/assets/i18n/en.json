@@ -151,5 +151,35 @@
   },
   "cerrar": {
     "title": "LOG OUT"
+  },
+  "nivel": {
+    "title": "Level"
+  },
+  "tipo": {
+    "title": "Type"
+  },
+  "Nivel": {
+    "title": "LEVEL"
+  },
+  "Tipo": {
+    "title": "TYPE"
+  },
+  "mmagic": {
+    "title": "SPELL"
+  },
+  "mbeast": {
+    "title": "BEAST"
+  },
+  "power": {
+    "title": "Power"
+  },
+  "life": {
+    "title": "Life"
+  },
+  "Power": {
+    "title": "POWER"
+  },
+  "Life": {
+    "title": "LIFE"
   }
 }

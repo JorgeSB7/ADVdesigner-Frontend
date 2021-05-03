@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { BeastPageRoutingModule } from './beast-routing.module';
 
 import { BeastPage } from './beast.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    BeastPageRoutingModule
+    BeastPageRoutingModule,
+    TranslateModule
   ],
   declarations: [BeastPage]
 })
