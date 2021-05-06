@@ -45,7 +45,7 @@
         </ion-col>
       </ion-row>
 
-      <ion-row style="padding-right: 7px; padding-left: 7px;">
+      <ion-row class="pprow">
         <ion-col class="border1N" size="4">
           {{'Mname.title' | translate}}
         </ion-col>
@@ -54,28 +54,26 @@
         </ion-col>
       </ion-row>
 
-      <ion-row style="padding-right: 7px; padding-left: 7px;">
-        <ion-col class="borderC">
+      <ion-row class="pprow">
+        <ion-col class="borderE3">
           {{'Mrace.title' | translate}}
-        </ion-col>
-        <ion-col class="borderE">
-          {{character.race}}
-        </ion-col>
-        <ion-col class="borderE" style="background-color: rgb(149, 224, 243); font-weight: bold;">
-          {{'Mclass.title' | translate}}
-        </ion-col>
-        <ion-col class="borderE">
-          {{character.rolclass}}
+          ({{character.race}})
         </ion-col>
       </ion-row>
 
-    </ion-grid>
+      <ion-row class="pprow">
+        <ion-col class="borderE2">
+          {{this.loreRaza}}
+        </ion-col>
+      </ion-row>
 
-    <ion-grid style="font-size: 12px;">
+      <ion-row class="pprow">
+        <ion-col></ion-col>
+      </ion-row>
 
-      <ion-row style="padding-right: 7px; padding-left: 7px;">
+      <ion-row class="pprow">
         <ion-col size="9" class="borderA">
-          CARACTERÍSTICA
+          {{'CARACTERISTICA.title' | translate}}
         </ion-col>
         <ion-col size="3" class="borderB">
           BONUS
@@ -83,9 +81,10 @@
       </ion-row>
 
       <!-- strength -->
-      <ion-row style="padding-right: 7px; padding-left: 7px;">
+      <ion-row class="pprow">
         <ion-col class="borderD" size="2" style="background-color: #3880ff;">
-          <ion-icon class="icons" name="strength" src="assets/imgs/formcha/strength.svg"></ion-icon>        </ion-col>
+          <ion-icon class="icons" name="strength" src="assets/imgs/formcha/strength.svg"></ion-icon>
+        </ion-col>
         <ion-col class="borderC" size="4">
           {{'Mstrength.title' | translate}}
         </ion-col>
@@ -98,7 +97,7 @@
       </ion-row>
 
       <!-- dexterity -->
-      <ion-row style="padding-right: 7px; padding-left: 7px;">
+      <ion-row class="pprow">
         <ion-col class="borderD" size="2" style="background-color: #3dc2ff;">
           <ion-icon class="icons" name="dexterity" src="assets/imgs/formcha/dexterity.svg"></ion-icon>
         </ion-col>
@@ -114,7 +113,7 @@
       </ion-row>
 
       <!-- constitution -->
-      <ion-row style="padding-right: 7px; padding-left: 7px;">
+      <ion-row class="pprow">
         <ion-col class="borderD" size="2" style="background-color: #2dd36f;">
           <ion-icon class="icons" name="constitution" src="assets/imgs/formcha/constitution.svg"></ion-icon>
         </ion-col>
@@ -130,7 +129,7 @@
       </ion-row>
 
       <!-- intelligence -->
-      <ion-row style="padding-right: 7px; padding-left: 7px;">
+      <ion-row class="pprow">
         <ion-col class="borderD" size="2" style="background-color: #f4f5f8;">
           <ion-icon class="icons" name="intelligence" src="assets/imgs/formcha/intelligence.svg"></ion-icon>
         </ion-col>
@@ -146,7 +145,7 @@
       </ion-row>
 
       <!-- wisdom -->
-      <ion-row style="padding-right: 7px; padding-left: 7px;">
+      <ion-row class="pprow">
         <ion-col class="borderD" size="2" style="background-color: #eb445a;">
           <ion-icon class="icons" name="wisdom" src="assets/imgs/formcha/wisdom.svg"></ion-icon>
         </ion-col>
@@ -162,7 +161,7 @@
       </ion-row>
 
       <!-- charisma -->
-      <ion-row style="padding-right: 7px; padding-left: 7px; justify-content: center; align-items: center;">
+      <ion-row class="pprow">
         <ion-col class="borderD" size="2" style="background-color: #ffc409; width: 2em;">
           <ion-icon class="icons" name="charisma" src="assets/imgs/formcha/charisma.svg"></ion-icon>
         </ion-col>
@@ -174,6 +173,38 @@
         </ion-col>
         <ion-col class="borderE" size="3">
           {{this.car}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pprow">
+        <ion-col></ion-col>
+      </ion-row>
+
+      <ion-row class="pprow">
+        <ion-col style="display: flex; align-items: center; justify-content: center;">
+          <ion-img class="iroll" src={{this.aux}}></ion-img>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pprow">
+        <ion-col class="borderE4">
+          {{'Mclass.title' | translate}}
+          ({{character.rolclass}})
+        </ion-col>
+      </ion-row>
+      <ion-row class="pprow">
+        <ion-col class="borderE2">
+          {{this.loreClase}}
+        </ion-col>
+      </ion-row>
+      <ion-row class="pprow">
+        <ion-col class="borderE3">
+          {{'COMPETENCIAS.title' | translate}}
+        </ion-col>
+      </ion-row>
+      <ion-row class="pprow">
+        <ion-col class="borderE2">
+          {{this.aux2}}
         </ion-col>
       </ion-row>
 

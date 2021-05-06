@@ -37,8 +37,8 @@
   <ion-list>
     <!-- EDITAR -->
     <ion-item-sliding *ngFor="let campaign of campanias">
-      <ion-item-options side="start" (ionSwipe)="editCampaign(campaign)" *ngIf="this.iduser === this.campaign.contras">
-        <ion-item-option color="primary" (click)="editCampaign(campaign)" *ngIf="this.iduser === this.campaign.contras">
+      <ion-item-options side="start" (ionSwipe)="editCampaign(campaign)">
+        <ion-item-option color="primary" (click)="editCampaign(campaign)">
           <ion-icon slot="icon-only" name="create"></ion-icon>
         </ion-item-option>
       </ion-item-options>
@@ -78,8 +78,8 @@
       </ion-item>
 
       <!-- BORRAR -->
-      <ion-item-options side="end" (ionSwipe)="presentAlertCam(campaign)" *ngIf="this.iduser == this.campaign.contras">
-        <ion-item-option color="danger" (click)="presentAlertCam(campaign)" *ngIf="this.iduser == this.campaign.contras">
+      <ion-item-options side="end" (ionSwipe)="remove(campaign)">
+        <ion-item-option color="danger" (click)="remove(campaign)">
           <ion-icon slot="icon-only" name="trash"></ion-icon>
         </ion-item-option>
       </ion-item-options>

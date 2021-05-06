@@ -13,6 +13,9 @@ export class ToolsPage implements OnInit {
   private event: string;
   private treasures: string[];
   private treasure: string;
+  private aux = 1;
+  private aux2 = 0;
+  private resultEND: any;
 
   constructor(public ui: UiService,
     private toast: ToastController) { }
@@ -48,51 +51,76 @@ export class ToolsPage implements OnInit {
   }
 
   //_____________________________________DICE
-
-  dice4 (result) {
-    result = this.randomIntFromInterval(1, 4);
-    this.diceToast(result);
+  /**
+   * La función determina cuantos dados se van a lanzar. Si recibe "more" aumenta y si 
+   recibe "less" disminuye. El valor nunca sera menor a 1.
+   * @param ax recibe un string.
+   */
+  numberDices(ax: string) {
+    if (ax == "more") {
+      this.aux += 1;
+    } else if (ax == "less") {
+      if (this.aux > 1) {
+        this.aux -= 1
+      } else {
+        this.aux = 1;
+      }
+    } else {
+      console.log("error");
+    }
   }
 
-  dice6 (result) {
-    result = this.randomIntFromInterval(1, 6);
-    this.diceToast(result);
+  /**
+   * La función suma o resta un valor al resultado final del lanzamiento de un dado. Si recibe 
+   "more" aumenta y si recibe "less" disminuye. El valor por defecto siempre sera a 0.
+   * @param ax 
+   */
+  MMDices(ax: string) {
+    if (ax == "more") {
+      this.aux2 += 1;
+    } else if (ax == "less") {
+      this.aux2-= 1
+    } else {
+      console.log("error");
+    }
   }
 
-  dice8 (result) {
-    result = this.randomIntFromInterval(1, 8);
-    this.diceToast(result);
+  /**
+   * Simula el lanzamiento de un dado. El resultado estara comprendido entre 1 y el valor maximo del dado seleccionado.
+   Se aplica el numero de dados lanzados y la suma de un valor deseado.
+   * @param dado recibe el valor máximo que puede alcanzar el dado seleccionado.
+   */
+  async dado(dado) {
+    this.resultEND = 0;
+    for (let index = 0; index < this.aux; index++) {
+      this.result = this.randomIntFromInterval(1, dado);
+      this.resultEND = await this.resultEND + this.result;
+    }
+    this.resultEND = this.resultEND + this.aux2;
+    await this.diceToast(this.resultEND.toString());
   }
 
-  dice10 (result) {
-    result = this.randomIntFromInterval(1, 10);
-    this.diceToast(result);
-  }
-
-  dice12 (result) {
-    result = this.randomIntFromInterval(1, 12);
-    this.diceToast(result);
-  }
-
-  dice20 (result) {
-    result = this.randomIntFromInterval(1, 20);
-    this.diceToast(result);
-  }
-  
   //_____________________________________EVENTS/TREASURES
-  
-  generateEvents(result){
+  /**
+   * Selecciona un evento aletorio y los muestra por pantalla.
+   * @param result 
+   */
+  generateEvents(result) {
     result = this.randomIntFromInterval(0, 5);
     this.events = ["HISTORIA", "MISIÓN", "MAZMORRA", "COMBATE", "ALDEA", "VIAJE"];
-    this.event = this.events [result],
-    this.oToast(this.event);
+    this.event = this.events[result],
+      this.oToast(this.event);
   }
 
-  generateTreasures(result){
+  /**
+   * Selecciona un tesoro aletorio y los muestra por pantalla.
+   * @param result 
+   */
+  generateTreasures(result) {
     result = this.randomIntFromInterval(0, 7);
     this.treasures = ["ORO", "OBJETO MÁGICO", "ARMA", "ARMADURA", "ALIADO", "NADA", "MALDICIÓN", "MAPA"];
-    this.treasure = this.treasures [result],
-    this.oToast(this.treasure);
+    this.treasure = this.treasures[result],
+      this.oToast(this.treasure);
   }
 
 }

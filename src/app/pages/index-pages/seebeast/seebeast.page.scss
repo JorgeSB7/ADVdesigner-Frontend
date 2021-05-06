@@ -1,0 +1,110 @@
+ion-toolbar {
+    // Gradiente
+    --background: rgb(25,168,115); /* Old browsers */
+    --background: -moz-linear-gradient(-45deg,  rgba(25,168,115,1) 0%, rgba(7,102,59,1) 100%); /* FF3.6-15 */
+    --background: -webkit-linear-gradient(-45deg,  rgba(25,168,115,1) 0%,rgba(7,102,59,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    --background: linear-gradient(135deg,  rgba(25,168,115,1) 0%,rgba(7,102,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#19a873', endColorstr='#07663b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+ion-content {
+    --background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('/assets/imgs/bestiary/ForestB.jpg');
+    --background-position: center top;
+    --background-repeat: repeat-y;
+    --background-size: cover;
+}
+
+.title {
+    font-family: MCoBold;
+    font-size: 35px;
+    color: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.box {
+    height: 100%;
+    //background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.8)),url('/assets/imgs/fondoIS.jpg');
+    //background-position: center top;
+    //background-repeat: no-repeat;
+    //background-size: cover;
+}
+
+.border1N {
+    border: 2px solid rgb(146, 21, 21);
+    text-align: center;
+    padding: auto;
+    font-weight: bold;
+    background-color: rgb(255, 196, 196);
+}
+  
+.border2N {
+    border-right: 2px solid rgb(146, 21, 21);
+    border-bottom: 2px solid rgb(146, 21, 21);
+    border-top: 2px solid rgb(146, 21, 21);
+    text-align: center;
+    padding: auto;
+    font-style: italic;
+    background-color: rgb(238, 242, 245);
+}
+
+.border3N {
+    border-left: 2px solid rgb(146, 21, 21);
+    border-right: 2px solid rgb(146, 21, 21);
+    text-align: center;
+    padding: auto;
+    font-weight: bold;
+    background-color: rgb(255, 196, 196);
+}
+
+.border4N {
+    border: 2px solid rgb(146, 21, 21);
+    text-align: center;
+    padding: 1em;
+    background-color: rgb(238, 242, 245);
+}
+
+.border5N {
+    border-top: 2px solid rgb(146, 21, 21);
+    border-left: 2px solid rgb(146, 21, 21);
+    border-right: 2px solid rgb(146, 21, 21);
+    text-align: center;
+    padding: auto;
+    font-weight: bold;
+    background-color: rgb(255, 196, 196);
+}
+  
+.border6N {
+    border-top: 2px solid rgb(146, 21, 21);
+    text-align: center;
+    padding: auto;
+    background-color: rgb(238, 242, 245);
+}
+
+.border7N {
+    border-top: 2px solid rgb(146, 21, 21);
+    border-right: 2px solid rgb(146, 21, 21);
+    border-left: 2px solid rgb(146, 21, 21);
+    text-align: center;
+    font-weight: bold;
+    padding: auto;
+    background-color: rgb(255, 196, 196);
+}
+
+.border8N {
+    border-top: 2px solid rgb(146, 21, 21);
+    border-right: 2px solid rgb(146, 21, 21);
+    border-right: 2px solid rgb(146, 21, 21);
+    text-align: center;
+    padding: auto;
+    background-color: rgb(238, 242, 245);
+}
+
+.borderImg {
+    background-color: black;
+    box-shadow: 0px 0px 10px 2px #000000;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}

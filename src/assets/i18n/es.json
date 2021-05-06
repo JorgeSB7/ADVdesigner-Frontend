@@ -1,185 +1,197 @@
 {
-    "characters": {
-        "title": "PERSONAJES"
-    },
-    "campaigns": {
-        "title": "CAMPAÑAS"
-    },
-    "bestiary": {
-        "title": "BESTIARIO"
-    },
-    "magic": {
-        "title": "CONJUROS"
-    },
-    "races": {
-        "title": "RAZAS"
-    },
-    "classes": {
-        "title": "CLASES"
-    },
-    "rules": {
-        "title": "REGLAMENTO"
-    },
-    "tools": {
-        "title": "HERRAMIENTAS"
-      },
-    "help": {
-        "title": "AYUDA"
-      },
-    "Idioma": {
-        "title": "Idioma"
-    },
-    "IdS": {
-        "title": "Idioma seleccionado"
-    },
-    "es": {
-        "title": "Español"
-    },
-    "en": {
-        "title": "Inglés"
-    },
-    "cancelar": {
-        "title": "cancelar"
-    },
-    "confirmar": {
-        "title": "confirmar"
-    },
-    "settings": {
-        "title": "AJUSTES"
-    },
-    "name": {
-      "title": "Nombre"
-    },
-    "race": {
-      "title": "Raza"
-    },
-    "class": {
-      "title": "Clase"
-    },
-    "strength": {
-      "title": "Fuerza"
-    },
-    "dexterity": {
-      "title": "Destreza"
-    },
-    "constitution": {
-      "title": "Constitución"
-    },
-    "intelligence": {
-      "title": "Inteligencia"
-    },
-    "wisdom": {
-      "title": "Sabiduría"
-    },
-    "charisma": {
-      "title": "Carisma"
-    },
-    "design": {
-      "title": "DISEÑO"
-    },
-    "send": {
-      "title": "ENVIAR"
-    },
-    "mcharacter": {
-      "title": "PERSONAJE"
-    },
-    "Mname": {
-      "title": "NOMBRE"
-    },
-    "Mrace": {
-      "title": "RAZA"
-    },
-    "Mclass": {
-      "title": "CLASE"
-    },
-    "Mstrength": {
-      "title": "FUERZA" 
-    },
-    "Mdexterity": {
-      "title": "DESTREZA" 
-    },
-    "Mconstitution": {
-      "title": "CONSTITUCIÓN" 
-    },
-    "Mintelligence": {
-      "title": "INTELIGENCIA"
-    },
-    "Mwisdom": {
-      "title": "SABIDURÍA"
-    },
-    "Mcharisma": {
-      "title": "CARISMA" 
-    },
-    "tcampaign": {
-      "title": "TÍTULO DE LA CAMPAÑA" 
-    },
-    "mcampaign": {
-        "title": "CAMPAÑA"
-    },
-    "description": {
-        "title": "DESCRIPCIÓN"
-    },
-    "DescriptionN": {
-        "title": "Descripción"
-      },
-      "Ldados": {
-        "title": "LANZAMIENTO DE DADOS"
-      },
-      "event": {
-        "title": "EVENTOS"
-      },
-      "treasure": {
-        "title": "TESOROS"
-      },
-      "user": {
-        "title": "Usuario"
-      },
-      "texthelp": {
-        "title": "es una herramienta web gratuita que te ayudará a crear, personalizar y gestionar tus partidas de rol. Es compatible con todo juego de rol que integre el sistema"
-      },
-      "texthelp2": {
-        "title": "Puedes consultar cualquier duda o actualización a traves de nuestras redes sociales"
-      },
-      "ddhelp": {
-        "title": "desarrollado y deseñado por"
-      },
-      "inicio": {
-        "title": "INICIO"
-      },
-      "homegame": {
-        "title": "Diseña tu juego, vive tu Aventura"
-      },
-      "cerrar": {
-        "title": "CERRAR SESIÓN"
-      },
-      "nivel": {
-        "title": "Nivel"
-      },
-      "tipo": {
-        "title": "Tipo"
-      },
-      "Nivel": {
-        "title": "NIVEL"
-      },
-      "Tipo": {
-        "title": "TIPO"
-      },
-      "mmagic": {
-        "title": "CONJURO"
-      },
-      "mbeast": {
-        "title": "BESTIA"
-      },
-      "power": {
-        "title": "Poder"
-      },
-      "life": {
-        "title": "Vida"
-      },
-      "Power": {
-        "title": "PODER"
-      },
-      "Life": {
-        "title": "VIDA"
-      }
+  "characters": {
+    "title": "PERSONAJES"
+  },
+  "campaigns": {
+    "title": "CAMPAÑAS"
+  },
+  "bestiary": {
+    "title": "BESTIARIO"
+  },
+  "magic": {
+    "title": "CONJUROS"
+  },
+  "races": {
+    "title": "RAZAS"
+  },
+  "classes": {
+    "title": "CLASES"
+  },
+  "rules": {
+    "title": "REGLAMENTO"
+  },
+  "tools": {
+    "title": "HERRAMIENTAS"
+  },
+  "help": {
+    "title": "INFORMACIÓN"
+  },
+  "Idioma": {
+    "title": "Idioma"
+  },
+  "IdS": {
+    "title": "Idioma seleccionado"
+  },
+  "es": {
+    "title": "Español"
+  },
+  "en": {
+    "title": "Inglés"
+  },
+  "cancelar": {
+    "title": "cancelar"
+  },
+  "confirmar": {
+    "title": "confirmar"
+  },
+  "settings": {
+    "title": "AJUSTES"
+  },
+  "name": {
+    "title": "Nombre"
+  },
+  "race": {
+    "title": "Raza"
+  },
+  "class": {
+    "title": "Clase"
+  },
+  "strength": {
+    "title": "Fuerza"
+  },
+  "dexterity": {
+    "title": "Destreza"
+  },
+  "constitution": {
+    "title": "Constitución"
+  },
+  "intelligence": {
+    "title": "Inteligencia"
+  },
+  "wisdom": {
+    "title": "Sabiduría"
+  },
+  "charisma": {
+    "title": "Carisma"
+  },
+  "design": {
+    "title": "DISEÑO"
+  },
+  "send": {
+    "title": "ENVIAR"
+  },
+  "mcharacter": {
+    "title": "PERSONAJE"
+  },
+  "Mname": {
+    "title": "NOMBRE"
+  },
+  "Mrace": {
+    "title": "RAZA"
+  },
+  "Mclass": {
+    "title": "CLASE"
+  },
+  "Mstrength": {
+    "title": "FUERZA"
+  },
+  "Mdexterity": {
+    "title": "DESTREZA"
+  },
+  "Mconstitution": {
+    "title": "CONSTITUCIÓN"
+  },
+  "Mintelligence": {
+    "title": "INTELIGENCIA"
+  },
+  "Mwisdom": {
+    "title": "SABIDURÍA"
+  },
+  "Mcharisma": {
+    "title": "CARISMA"
+  },
+  "tcampaign": {
+    "title": "TÍTULO DE LA CAMPAÑA"
+  },
+  "mcampaign": {
+    "title": "CAMPAÑA"
+  },
+  "description": {
+    "title": "DESCRIPCIÓN"
+  },
+  "DescriptionN": {
+    "title": "Descripción"
+  },
+  "Ldados": {
+    "title": "LANZAMIENTO DE DADOS"
+  },
+  "event": {
+    "title": "EVENTOS"
+  },
+  "treasure": {
+    "title": "TESOROS"
+  },
+  "user": {
+    "title": "Usuario"
+  },
+  "texthelp": {
+    "title": "es una herramienta web gratuita que te ayudará a crear, personalizar y gestionar tus partidas de rol. Es compatible con todo juego de rol que integre el sistema"
+  },
+  "texthelp2": {
+    "title": "Puedes consultar cualquier duda o actualización a través de las redes sociales"
+  },
+  "ddhelp": {
+    "title": "desarrollado y diseñado por"
+  },
+  "inicio": {
+    "title": "INICIO"
+  },
+  "homegame": {
+    "title": "Diseña tu juego, vive tu Aventura"
+  },
+  "cerrar": {
+    "title": "CERRAR SESIÓN"
+  },
+  "nivel": {
+    "title": "Nivel"
+  },
+  "tipo": {
+    "title": "Tipo"
+  },
+  "Nivel": {
+    "title": "NIVEL"
+  },
+  "Tipo": {
+    "title": "TIPO"
+  },
+  "mmagic": {
+    "title": "CONJURO"
+  },
+  "mbeast": {
+    "title": "BESTIA"
+  },
+  "power": {
+    "title": "Poder"
+  },
+  "life": {
+    "title": "Vida"
+  },
+  "Power": {
+    "title": "PODER"
+  },
+  "Life": {
+    "title": "VIDA"
+  },
+  "Rango": {
+    "title": "RANGO"
+  },
+  "COMPETENCIAS": {
+    "title": "COMPETENCIAS"
+  },
+  "CARACTERISTICA": {
+    "title": "CARACTERÍSTICA"
+  },
+  "magia": {
+    "title": "MAGIA"
   }
+}

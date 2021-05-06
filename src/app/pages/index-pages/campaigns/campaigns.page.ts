@@ -5,6 +5,7 @@ import { ApiCampaignService } from 'src/app/services/api-campaign.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { UiService } from 'src/app/services/ui.service';
 import { FormcampaignPage } from '../formcampaign/formcampaign.page';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-campaigns',
@@ -13,20 +14,21 @@ import { FormcampaignPage } from '../formcampaign/formcampaign.page';
 })
 export class CampaignsPage implements OnInit {
   private campanias: Array<campaign>;
-  private iduser = this.auth.getUser().id;
+  private iduser: any;
   @ViewChild('input', {static: false}) myInput: IonSearchbar;
   
-
   constructor(private apiCam:ApiCampaignService,
     private ui:UiService,
     private alertController: AlertController,
     private auth: AuthService) { }
 
   ngOnInit() {
+    
   }
 
   async ionViewDidEnter() {
     await this.loadAll();
+    this.iduser = this.auth.getUser().id;
   }
 
   //________________________________________________loadAll
@@ -43,6 +45,22 @@ export class CampaignsPage implements OnInit {
   }
 
   //________________________________________________removeCampaign
+  remove(campaign: campaign){
+    console.log(this.auth.getUser().id);
+    console.log(this.iduser);
+    console.log(campaign.contras);
+    if (this.iduser == campaign.contras || this.iduser == 1) {
+      this.presentAlertCam(campaign);
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error al Eliminar campaña',
+        text: 'Está imtentando borrar la campaña "' + campaign.namecampaign + '". La opción de eliminar solo está disponible para el usuario creador o el administrador. Si ha detectado algún error no dude en contactar con el servicio técnico.',
+        footer: '<a href="mailto:ajosanchez@iesfranciscodelosrios.es">¿Necesita ayuda?</a>'
+      })
+    }
+  }
+
   public async removeCampaign(campaign: campaign) {
     await this.ui.showLoading();
     this.apiCam
@@ -94,10 +112,26 @@ export class CampaignsPage implements OnInit {
   }
 
   //________________________________________________editCampaign
+  edit(_campaign: campaign){
+    if (this.iduser == _campaign.contras || this.iduser == 1) {
+      this.editCampaign(_campaign);
+    } else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Error al Editar campaña',
+        text: 'Está imtentando editar la campaña "' + _campaign.namecampaign + '". La opción de editar solo está disponible para el usuario creador o el administrador. Si ha detectado algún error no dude en contactar con el servicio técnico.',
+        footer: '<a href="mailto:ajosanchez@iesfranciscodelosrios.es">¿Necesita ayuda?</a>'
+      })
+    }
+  }
+
   public async editCampaign(_campaign: campaign) {
-    const campaignToBeUpdated = await this.ui.showModal(FormcampaignPage, { campaign : _campaign });
+    const campaignToBeUpdated = await this.ui.showModal(FormcampaignPage, { campaign: _campaign });
+    //console.log(_campaign);
+    console.log(campaignToBeUpdated.data);
     try {
       if (campaignToBeUpdated.data) {
+        console.log(_campaign);
         // si no cierra
         await this.ui.showLoading();
         await this.apiCam.updateCampaign(campaignToBeUpdated.data);
@@ -106,10 +140,11 @@ export class CampaignsPage implements OnInit {
     } catch (err) {
       await this.ui.hideLoading();
       await this.ui.showToast(err.error, "danger");
+      console.log("ERRORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR")
     }
   }
 
-  //__________________________________________________________AMPLIAR PERSONAJE
+  //__________________________________________________________AMPLIAR CAMPAÑA
   public seecam(campaign: campaign){
     this.apiCam.seeCP(campaign);
   }

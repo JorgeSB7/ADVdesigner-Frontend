@@ -11,7 +11,10 @@ ion-toolbar {
     font-family: MCoBold;
     font-size: 35px;
     color: #f5f7fa;
-    padding-bottom: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .box {

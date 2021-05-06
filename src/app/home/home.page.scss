@@ -11,7 +11,10 @@ ion-toolbar {
   font-family: MCoBold;
   font-size: 35px;
   color: #f5f7fa;
-  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 //____________________________________________________Botones del menú principal
@@ -148,7 +151,7 @@ ion-toolbar {
 //____________________________________________________Fondos slide
 
 .boxP {
-  border-radius: 4% !important;
+  border-radius: 15px !important;
   box-shadow: 0px 8px 15px -10px rgba(0,0,0,0.23);
   width: 100%;
   background-color: #63060600;
@@ -164,7 +167,7 @@ ion-toolbar {
 .b2 {
   width: 99%;
   height: 100%;
-  border-radius: 4% !important;
+  border-radius: 15px !important;
   background: linear-gradient(rgba(255,255,255,0.0),rgba(255,255,255,0.0)),url('/assets/imgs/dd3.jpg');
   background-position: center top;
   background-repeat: no-repeat;
@@ -175,7 +178,7 @@ ion-toolbar {
 .c3 {
   width: 99%;
   height: 100%;
-  border-radius: 4% !important;
+  border-radius: 15px !important;
   background: linear-gradient(rgba(255,255,255,0.0),rgba(255,255,255,0.0)),url('/assets/imgs/dd5.jpg');
   background-position: center top;
   background-repeat: no-repeat;
@@ -185,7 +188,7 @@ ion-toolbar {
 .d4 {
   width: 99%;
   height: 100%;
-  border-radius: 4% !important;
+  border-radius: 15px !important;
   background: linear-gradient(rgba(255,255,255,0.0),rgba(255,255,255,0.0)),url('/assets/imgs/RD.jpg');
   background-position: center top;
   background-repeat: no-repeat;

@@ -7,12 +7,14 @@ ion-toolbar {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b52424', endColorstr='#6c0087',GradientType=1 ); /* IE6-9 */
 }
 
-
 .title {
     font-family: MCoBold;
-    font-size: 32px;
+    font-size: 35px;
     color: #f5f7fa;
-    padding-bottom: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .box {

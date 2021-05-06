@@ -26,29 +26,29 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 .dT {
-    --background: rgb(255, 255, 255);
-    --height: 140px;
-    --width: 140px;
-    --border-color: rgb(52, 40, 80);
-    --border-width: 5px;
+    --background: linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0)),url("/assets/imgs/imclasses/stone.jpg");
+    --height: 4em;
+    --width: 4em;
+    --border-color: rgb(0, 0, 0);
+    --border-width: 2px;
     --border-style: solid;
     --border-radius: 100%;
-    --color: rgb(52, 40, 80);
+    --color: rgb(36, 26, 59);
     text-align: center;
-    font-size: 60px;
+    font-size: 2.5rem;
 }
 
 .oT {
-    --background: rgb(255, 255, 255);
-    --height: 100px;
-    --width: 165px;
-    --border-color: rgb(52, 40, 80);
-    --border-width: 5px;
+    --background: linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0)),url("/assets/imgs/imraces/papyrus.jpg");
+    --height: 6em;
+    --width: 9em;
+    --border-color: rgb(0, 0, 0);
+    --border-width: 2px;
     --border-style: solid;
-    --border-radius: 50%;
-    --color: rgb(52, 40, 80);
+    --border-radius: 25px;
+    --color: rgb(36, 26, 59);
     text-align: center;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 

@@ -50,7 +50,8 @@
           <ion-grid>
             <ion-row>
               <ion-col size="2">
-                <ion-icon name="arrow-forward-circle-outline" style="height: 100%; width: 100%; color: rgb(21, 146, 100);"></ion-icon>
+                <ion-icon name="arrow-forward-circle-outline"
+                  style="height: 100%; width: 100%; color: rgb(21, 146, 100);"></ion-icon>
               </ion-col>
               <ion-col size="10">
 
@@ -59,22 +60,14 @@
                     <ion-col class="border1N" size="4">
                       {{'Mname.title' | translate}}
                     </ion-col>
-                    <ion-col class="border2N" size="8">
+                    <ion-col class="border2N">
                       {{beast.namebeast}}
                     </ion-col>
                   </ion-row>
                   <ion-row>
                     <ion-col class="borderA">
                       {{'Tipo.title' | translate}}
-                    </ion-col>
-                    <ion-col class="borderB">
-                      {{beast.type}}
-                    </ion-col>
-                    <ion-col class="borderC">
-                      {{'Power.title' | translate}}
-                    </ion-col>
-                    <ion-col class="borderD">
-                      {{beast.power}}
+                      ({{beast.type}})
                     </ion-col>
                   </ion-row>
                 </ion-grid>

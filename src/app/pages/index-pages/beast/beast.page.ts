@@ -12,10 +12,10 @@ import { FormbeastPage } from '../formbeast/formbeast.page';
 })
 export class BeastPage implements OnInit {
   public bestias: Array<beast>;
-  @ViewChild('input', {static: false}) myInput: IonSearchbar ;
+  @ViewChild('input', { static: false }) myInput: IonSearchbar;
 
   constructor(private apiBea: ApiBeastService,
-    private ui:UiService,
+    private ui: UiService,
     private alertController: AlertController) { }
 
   ngOnInit() {
@@ -26,6 +26,9 @@ export class BeastPage implements OnInit {
   }
 
   //________________________________________________loadAll
+  /**
+   * Carga todas las bestias del usuario
+   */
   public async loadAll() {
     await this.ui.showLoading();
     try {
@@ -39,6 +42,10 @@ export class BeastPage implements OnInit {
   }
 
   //________________________________________________removeBeast
+  /**
+   * Elimina la bestia seleccionada.
+   * @param beast recibe una bestia.
+   */
   public async removeBeast(beast: beast) {
     await this.ui.showLoading();
     this.apiBea
@@ -51,6 +58,10 @@ export class BeastPage implements OnInit {
   }
 
   //________________________________________________searchBeast
+  /**
+   * Busca por nombre de la bestia segun el patrón de caracteres insertado.
+   * @param $event recibe caracteres.
+   */
   public async searchBeast($event) {
     console.log($event);
     let value = $event.detail.value;
@@ -59,20 +70,23 @@ export class BeastPage implements OnInit {
     if (value !== '') {
       //await this.ui.showLoading();
       this.apiBea.searchByName(value)
-      .then(d => {
-        this.bestias = d;
-      })
-      .catch(async err => await this.ui.showToast(err.error, "danger"))
-      .finally(async () => {
-       // await this.ui.hideLoading();
-       // this.myInput.setFocus();
-      });
+        .then(d => {
+          this.bestias = d;
+        })
+        .catch(async err => await this.ui.showToast(err.error, "danger"))
+        .finally(async () => {
+          // await this.ui.hideLoading();
+          // this.myInput.setFocus();
+        });
     } else {
       await this.loadAll();
     }
   }
 
   //________________________________________________addBeast
+  /**
+   * Crea una bestia.
+   */
   public async addBeast() {
     const beastToBeAdd = await this.ui.showModal(FormbeastPage, { beast: {} });
     console.log(beastToBeAdd);
@@ -90,8 +104,12 @@ export class BeastPage implements OnInit {
   }
 
   //________________________________________________editBeast
+  /**
+   * Edita la bestia seleccionada.
+   * @param _beast recibe una bestia.
+   */
   public async editBeast(_beast: beast) {
-    const beastToBeUpdated = await this.ui.showModal(FormbeastPage, { beast : _beast });
+    const beastToBeUpdated = await this.ui.showModal(FormbeastPage, { beast: _beast });
     try {
       if (beastToBeUpdated.data) {
         console.log(_beast);
@@ -107,11 +125,19 @@ export class BeastPage implements OnInit {
   }
 
   //__________________________________________________________AMPLIAR BESTIA
-  public seecha(beast: beast){
+  /**
+   * Abre una nueva página donde visualizar informacion detallada de la bestia seleccionada.
+   * @param beast recibe una bestia.
+   */
+  public seecha(beast: beast) {
     this.apiBea.seePJ(beast);
   }
-  
+
   //__________________________________________________________ALERT DELETE
+  /**
+   * Proporciona una seguridad extra antes de eliminar una bestia. Si el usuario acepta se llama a la funcion remove.
+   * @param beast recibe una bestia.
+   */
   async presentAlert(beast: beast) {
     const alert = await this.alertController.create({
       header: '¿Desea eliminar la bestia?',

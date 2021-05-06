@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { SeebeastPageRoutingModule } from './seebeast-routing.module';
 
 import { SeebeastPage } from './seebeast.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SeebeastPageRoutingModule
+    SeebeastPageRoutingModule,
+    TranslateModule
   ],
   declarations: [SeebeastPage]
 })

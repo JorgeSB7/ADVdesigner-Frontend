@@ -181,5 +181,17 @@
   },
   "Life": {
     "title": "LIFE"
+  },
+  "Rango": {
+    "title": "RANGE"
+  },
+  "COMPETENCIAS": {
+    "title": "COMPETENCES"
+  },
+  "CARACTERISTICA": {
+    "title": "CHARACTERISTIC"
+  },
+  "magia": {
+    "title": "MAGIC"
   }
 }

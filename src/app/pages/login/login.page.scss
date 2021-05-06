@@ -14,14 +14,14 @@ ion-toolbar {
 }
 
 .logo {
-    width: 240px !important;
-    height: 240px !important;
+    width: 15em !important;
+    height: 15em !important;
     color: black;
 }
 
 .imagecol {
-    margin-top: 20px;
-    height: 175px;
+    margin-top: 1.5em;
+    height: 11em;
 }
 
 ion-toolbar {
@@ -29,7 +29,7 @@ ion-toolbar {
 }
 
 ion-header {
-    height: 39%;
+    height: 40%;
 }
 
 .box {
@@ -50,6 +50,6 @@ ion-header {
 .IS {
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5rem;
     color: white;
 }

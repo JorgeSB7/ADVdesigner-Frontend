@@ -80,7 +80,9 @@ export class FormmagicPage {
   }
 
   //___________________________________________IMG
-
+  /**
+   * Selecciona una imagen de la galeria.
+   */
   setImg() {
     this.gallery.getImage().then(result => {
       this.magic.imagem = this.gallery.image

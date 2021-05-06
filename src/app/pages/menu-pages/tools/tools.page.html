@@ -31,7 +31,7 @@
 <ion-content>
   <div class="box">
     <ion-grid>
-      <ion-row style="margin-top: 20px;">
+      <ion-row style="margin-top: 0.5em;">
         <ion-col></ion-col>
       </ion-row>
 
@@ -43,17 +43,17 @@
 
       <ion-row style="margin-right: 10px; margin-left: 10px;">
         <ion-col style="display: flex; justify-content: center; align-items: center;">
-          <ion-button class="Bfondo" (click)="this.dice4()">
+          <ion-button class="Bfondo" (click)="this.dado(4)">
             <ion-icon class="Bicon" src="assets/imgs/tools/dado_de_4_caras.svg"></ion-icon>
           </ion-button>
         </ion-col>
         <ion-col style="display: flex; justify-content: center; align-items: center;">
-          <ion-button class="Bfondo" (click)="this.dice6()">
+          <ion-button class="Bfondo" (click)="this.dado(6)">
             <ion-icon class="Bicon" src="assets/imgs/tools/dado_de_6_caras.svg"></ion-icon>
           </ion-button>
         </ion-col>
         <ion-col style="display: flex; justify-content: center; align-items: center;">
-          <ion-button class="Bfondo" (click)="this.dice8()">
+          <ion-button class="Bfondo" (click)="this.dado(8)">
             <ion-icon class="Bicon" src="assets/imgs/tools/dado_de_8_caras.svg"></ion-icon>
           </ion-button>
         </ion-col>
@@ -61,18 +61,53 @@
 
       <ion-row style="margin-right: 10px; margin-left: 10px;">
         <ion-col style="display: flex; justify-content: center; align-items: center;">
-          <ion-button class="Bfondo" (click)="this.dice10()">
+          <ion-button class="Bfondo" (click)="this.dado(10)">
             <ion-icon class="Bicon" src="assets/imgs/tools/dado_de_10_caras.svg"></ion-icon>
           </ion-button>
         </ion-col>
         <ion-col style="display: flex; justify-content: center; align-items: center;">
-          <ion-button class="Bfondo" (click)="this.dice12()">
+          <ion-button class="Bfondo" (click)="this.dado(12)">
             <ion-icon class="Bicon" src="assets/imgs/tools/dado_de_12_caras.svg"></ion-icon>
           </ion-button>
         </ion-col>
         <ion-col style="display: flex; justify-content: center; align-items: center;">
-          <ion-button class="Bfondo" (click)="this.dice20()">
+          <ion-button class="Bfondo" (click)="this.dado(20)">
             <ion-icon class="Bicon" src="assets/imgs/tools/dado_de_20_caras.svg"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-top: 10px;">
+        <ion-col style="display: flex; justify-content: center; align-items: center;">
+          <ion-button (click)="this.numberDices('less')" color="success">
+            <ion-icon src="assets/imgs/tools/menos.svg"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col style="background-color: rgb(78, 78, 78); color: white; font-weight: bold; 
+        display: flex; justify-content: center; align-items: center; border: 6px solid #2dd36f;
+        border-radius: 12px;">
+          d{{this.aux}}
+        </ion-col>
+        <ion-col style="display: flex; justify-content: center; align-items: center;">
+          <ion-button (click)="this.numberDices('more')" color="success">
+            <ion-icon src="assets/imgs/tools/mas.svg"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row style="margin-top: 10px;">
+        <ion-col style="display: flex; justify-content: center; align-items: center;">
+          <ion-button (click)="this.MMDices('less')">
+            <ion-icon src="assets/imgs/tools/menos.svg"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col style="background-color: rgb(78, 78, 78); color: white; font-weight: bold; 
+        display: flex; justify-content: center; align-items: center; border: 6px solid #3880ff;
+        border-radius: 12px;">
+          <label *ngIf="this.aux2 >= 0">+</label>{{this.aux2}}
+        </ion-col>
+        <ion-col style="display: flex; justify-content: center; align-items: center;">
+          <ion-button (click)="this.MMDices('more')">
+            <ion-icon src="assets/imgs/tools/mas.svg"></ion-icon>
           </ion-button>
         </ion-col>
       </ion-row>

@@ -12,10 +12,10 @@ import { FormcharacterPage } from '../formcharacter/formcharacter.page';
 })
 export class CharactersPage implements OnInit {
   public personajes: Array<character>;
-  @ViewChild('input', {static: false}) myInput: IonSearchbar ;
+  @ViewChild('input', { static: false }) myInput: IonSearchbar;
 
-  constructor(private apiCha:ApiCharacterService,
-    private ui:UiService,
+  constructor(private apiCha: ApiCharacterService,
+    private ui: UiService,
     private alertController: AlertController) { }
 
   ngOnInit() {
@@ -25,7 +25,10 @@ export class CharactersPage implements OnInit {
     await this.loadAll();
   }
 
-  //________________________________________________loadAll
+  //_____________________________________________________loadAll
+  /**
+   * Carga todos los personajes del usuario.
+   */
   public async loadAll() {
     await this.ui.showLoading();
     try {
@@ -38,7 +41,11 @@ export class CharactersPage implements OnInit {
     }
   }
 
-  //________________________________________________removeCharacter
+  //_____________________________________________________removeCharacter
+  /**
+   * Borra el personaje elegido.
+   * @param character recibe un personaje.
+   */
   public async removeCharacter(character: character) {
     await this.ui.showLoading();
     this.apiCha
@@ -50,7 +57,11 @@ export class CharactersPage implements OnInit {
       });
   }
 
-  //________________________________________________searchCharacter
+  //_____________________________________________________searchCharacter
+  /**
+   * Busca por el nombre del personaje.
+   * @param $event recibe una serie de caracteres.
+   */
   public async searchCharacter($event) {
     console.log($event);
     let value = $event.detail.value;
@@ -59,20 +70,23 @@ export class CharactersPage implements OnInit {
     if (value !== '') {
       //await this.ui.showLoading();
       this.apiCha.searchByName(value)
-      .then(d => {
-        this.personajes = d;
-      })
-      .catch(async err => await this.ui.showToast(err.error, "danger"))
-      .finally(async () => {
-       // await this.ui.hideLoading();
-       // this.myInput.setFocus();
-      });
+        .then(d => {
+          this.personajes = d;
+        })
+        .catch(async err => await this.ui.showToast(err.error, "danger"))
+        .finally(async () => {
+          // await this.ui.hideLoading();
+          // this.myInput.setFocus();
+        });
     } else {
       await this.loadAll();
     }
   }
 
-  //________________________________________________addCharacter
+  //_____________________________________________________addCharacter
+  /**
+   * Abre el formulario para crear un nuevo persoje. Luego carga de nuevo todos los personajes del usuario.
+   */
   public async addCharacter() {
     const characterToBeAdd = await this.ui.showModal(FormcharacterPage, { character: {} });
     console.log(characterToBeAdd);
@@ -89,9 +103,14 @@ export class CharactersPage implements OnInit {
     }
   }
 
-  //________________________________________________editCharacter
+  //_____________________________________________________editCharacter
+  /**
+   * Abre el formulario para editar el personaje. 
+   * @param _character recibe el personaje que se desea editar. Luego carga de nuevo todos los personajes con los cambios actualizados.
+   */
   public async editCharacter(_character: character) {
-    const characterToBeUpdated = await this.ui.showModal(FormcharacterPage, { character : _character });
+    const characterToBeUpdated = await this.ui.showModal(FormcharacterPage, { character: _character });
+    console.log(characterToBeUpdated.data);
     try {
       if (characterToBeUpdated.data) {
         console.log(_character);
@@ -107,11 +126,19 @@ export class CharactersPage implements OnInit {
   }
 
   //__________________________________________________________AMPLIAR PERSONAJE
-  public seecha(character: character){
+  /**
+   * Muestra una nueva página con información detallada del personaje.
+   * @param character recibe un personaje.
+   */
+  public seecha(character: character) {
     this.apiCha.seePJ(character);
   }
-  
+
   //__________________________________________________________ALERT DELETE
+  /**
+   * Muestra una alerta de seguridad para eliminar a un personaje. Si responde que si se llama al metodo de borrar.
+   * @param character recibe un personaje.
+   */
   async presentAlert(character: character) {
     const alert = await this.alertController.create({
       header: '¿Desea eliminar el personaje?',
@@ -119,13 +146,13 @@ export class CharactersPage implements OnInit {
         text: 'No',
         role: 'cancel',
         handler: () => {
-          // Ha respondido que no así que no hacemos nada
+          // Ha respondido que no asi que no hacemos nada
         }
       },
       {
         text: 'Confirmar',
         handler: () => {
-          // AquÍ borramos el sitio en la base de datos
+          // Aqui borramos el sitio en la base de datos
           this.removeCharacter(character);
         }
       }]

@@ -1,17 +1,20 @@
 ion-toolbar {
     // Gradiente
-    --background: rgb(3,22,193); /* Old browsers */
-    --background: -moz-linear-gradient(-45deg,  rgba(3,22,193,1) 0%, rgba(0,52,117,1) 100%); /* FF3.6-15 */
-    --background: -webkit-linear-gradient(-45deg,  rgba(3,22,193,1) 0%,rgba(0,52,117,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    --background: linear-gradient(135deg,  rgba(3,22,193,1) 0%,rgba(0,52,117,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0316c1', endColorstr='#003475',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    --background: rgb(181,36,36); /* Old browsers */
+    --background: -moz-linear-gradient(left,  rgba(181,36,36,1) 0%, rgba(108,0,135,1) 100%); /* FF3.6-15 */
+    --background: -webkit-linear-gradient(left,  rgba(181,36,36,1) 0%,rgba(108,0,135,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    --background: linear-gradient(to right,  rgba(181,36,36,1) 0%,rgba(108,0,135,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b52424', endColorstr='#6c0087',GradientType=1 ); /* IE6-9 */
 }
 
 .title {
     font-family: MCoBold;
     font-size: 35px;
     color: #f5f7fa;
-    padding-bottom: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 ion-content {

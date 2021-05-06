@@ -6,5 +6,5 @@ export interface campaign {
     picture?:string,
     description:string,
     characters?:character[],
-    contras:number
+    contras?:any
 }

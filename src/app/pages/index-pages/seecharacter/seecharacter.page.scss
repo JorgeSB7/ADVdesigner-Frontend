@@ -19,7 +19,10 @@ ion-toolbar {
     font-family: MCoBold;
     font-size: 35px;
     color: #f5f7fa;
-    padding-bottom: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .border1N {
@@ -88,6 +91,41 @@ ion-toolbar {
     text-align: center;
     background-color: rgb(238, 242, 245);
     height: 2.5em;
+}
+
+.borderE2 {
+    border: 2px solid #0a687f;
+    text-align: center;
+    background-color: rgb(238, 242, 245);
+    height: auto;
+    padding: 1em;
+}
+
+.borderE3 {
+    border-left: 2px solid #0a687f;
+    border-right: 2px solid #0a687f;
+    text-align: center;
+    background-color: rgb(149, 224, 243);
+    font-weight: bold;
+}
+
+.borderE4 {
+    border-top: 2px solid #0a687f;
+    border-left: 2px solid #0a687f;
+    border-right: 2px solid #0a687f;
+    text-align: center;
+    background-color: rgb(149, 224, 243);
+    font-weight: bold;
+}
+
+.iroll {
+    width: 50%; 
+    border: 2px solid white;
+}
+
+.pprow {
+    padding-right: 7px; 
+    padding-left: 7px;
 }
 
 .borderImg {

@@ -12,20 +12,23 @@ import { FormmagicPage } from '../formmagic/formmagic.page';
 })
 export class MagicPage implements OnInit {
   public conjuros: Array<magic>;
-  @ViewChild('input', {static: false}) myInput: IonSearchbar ;
+  @ViewChild('input', { static: false }) myInput: IonSearchbar;
 
   constructor(private apiMag: ApiMagicService,
-    private ui:UiService,
+    private ui: UiService,
     private alertController: AlertController) { }
 
   ngOnInit() {
   }
-  
+
   async ionViewDidEnter() {
     await this.loadAll();
   }
 
   //________________________________________________loadAll
+  /**
+   * Carga todos los conjuros del usuario.
+   */
   public async loadAll() {
     await this.ui.showLoading();
     try {
@@ -39,6 +42,10 @@ export class MagicPage implements OnInit {
   }
 
   //________________________________________________removeMagic
+  /**
+   * Borra el conjuro seleccionado.
+   * @param magic recibe un conjuro.
+   */
   public async removeMagic(magic: magic) {
     await this.ui.showLoading();
     this.apiMag
@@ -51,6 +58,10 @@ export class MagicPage implements OnInit {
   }
 
   //________________________________________________searchMagic
+  /**
+   * Busca por el nombre del conjuro.
+   * @param $event recibe una serie de caracteres.
+   */
   public async searchMagic($event) {
     console.log($event);
     let value = $event.detail.value;
@@ -59,20 +70,23 @@ export class MagicPage implements OnInit {
     if (value !== '') {
       //await this.ui.showLoading();
       this.apiMag.searchByName(value)
-      .then(d => {
-        this.conjuros = d;
-      })
-      .catch(async err => await this.ui.showToast(err.error, "danger"))
-      .finally(async () => {
-       // await this.ui.hideLoading();
-       // this.myInput.setFocus();
-      });
+        .then(d => {
+          this.conjuros = d;
+        })
+        .catch(async err => await this.ui.showToast(err.error, "danger"))
+        .finally(async () => {
+          // await this.ui.hideLoading();
+          // this.myInput.setFocus();
+        });
     } else {
       await this.loadAll();
     }
   }
 
   //________________________________________________addMagic
+  /**
+   * Abre el formulario para crear un nuevo conjuro. Luego carga de nuevo todos los conjuros del usuario.
+   */
   public async addMagic() {
     const magicToBeAdd = await this.ui.showModal(FormmagicPage, { magic: {} });
     console.log(magicToBeAdd);
@@ -90,8 +104,12 @@ export class MagicPage implements OnInit {
   }
 
   //________________________________________________editMagic
+  /**
+   * Abre el formulario para editar un conjuro.
+   * @param _magic recibe el conjuro que se desea editar. Luego carga de nuevo todos los conjuros con los cambios actualizados.
+   */
   public async editMagic(_magic: magic) {
-    const magicToBeUpdated = await this.ui.showModal(FormmagicPage, { magic : _magic });
+    const magicToBeUpdated = await this.ui.showModal(FormmagicPage, { magic: _magic });
     try {
       if (magicToBeUpdated.data) {
         console.log(_magic);
@@ -107,11 +125,19 @@ export class MagicPage implements OnInit {
   }
 
   //__________________________________________________________AMPLIAR CONJURO
-  public seecha(magic: magic){
+  /**
+   * Muestra una nueva página con información detallada del conjuro.
+   * @param magic recibe un conjuro.
+   */
+  public seecha(magic: magic) {
     this.apiMag.seePJ(magic);
   }
-  
+
   //__________________________________________________________ALERT DELETE
+  /**
+   * Muestra una alerta de seguridad para eliminar a un conjuro. Si responde que si se llama al metodo de borrar.
+   * @param magic recibe un conjuro.
+   */
   async presentAlert(magic: magic) {
     const alert = await this.alertController.create({
       header: '¿Desea eliminar el conjuro?',
