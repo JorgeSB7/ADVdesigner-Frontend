@@ -92,6 +92,10 @@ const routes: Routes = [
     path: 'magic',
     loadChildren: () => import('./pages/index-pages/magic/magic.module').then( m => m.MagicPageModule)
   },
+  {
+    path: 'music',
+    loadChildren: () => import('./pages/menu-pages/music/music.module').then( m => m.MusicPageModule)
+  },
 ];
 
 @NgModule({

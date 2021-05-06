@@ -128,6 +128,7 @@ export class CampaignsPage implements OnInit {
   public async editCampaign(_campaign: campaign) {
     const campaignToBeUpdated = await this.ui.showModal(FormcampaignPage, { campaign: _campaign });
     //console.log(_campaign);
+    console.log(campaignToBeUpdated);
     console.log(campaignToBeUpdated.data);
     try {
       if (campaignToBeUpdated.data) {
@@ -138,6 +139,7 @@ export class CampaignsPage implements OnInit {
         await this.loadAll();
       }
     } catch (err) {
+      console.log(err);
       await this.ui.hideLoading();
       await this.ui.showToast(err.error, "danger");
       console.log("ERRORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR")
