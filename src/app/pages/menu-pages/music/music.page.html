@@ -1,6 +1,30 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>music</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="custom" style="zoom:1.5"></ion-menu-button>
+    </ion-buttons>
+    <ion-grid>
+      <ion-row>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="7" style="text-align:center !important" class="title">
+          <ion-label>{{'music.title' | translate}}</ion-label>
+        </ion-col>
+
+        <ion-col size="1" style="text-align:center !important">
+        </ion-col>
+
+        <ion-col size="3" style="text-align:center !important">
+          <ion-button routerLink="/home" style="--border-radius: 100% !important;">
+            <ion-icon name="home" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+    </ion-grid>
+
   </ion-toolbar>
 </ion-header>
 
@@ -12,7 +36,6 @@
       </ion-label>
     </ion-item>
   </ion-list>
-
 </ion-content>
 
 <ion-footer *ngIf="activeTrack">

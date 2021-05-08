@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { IonRange } from '@ionic/angular';
 import { Howl, Howler } from 'howler';
 
@@ -12,7 +12,7 @@ export interface Track {
   templateUrl: './music.page.html',
   styleUrls: ['./music.page.scss'],
 })
-export class MusicPage {
+export class MusicPage implements OnDestroy {
 
   playlist: Track[] = [
     {
@@ -32,6 +32,9 @@ export class MusicPage {
   @ViewChild('range', { static: false }) range: IonRange;
 
   constructor() { }
+  ngOnDestroy(): void {
+    this.player.stop();
+  }
 
   start(track: Track) {
     if (this.player) {

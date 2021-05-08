@@ -4,18 +4,28 @@ import {
   LoadingController,
   ToastController
 } from '@ionic/angular';
+import { LoadingOptions } from '@ionic/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UiService {
   private isLoading: any;
+  options: LoadingOptions = {
+    message: '<div class="loadbox"><div class="dice"></div></div>',
+    cssClass: 'loader',
+    translucent: true,
+    showBackdrop: true,
+    spinner: null,
+    mode: 'md',
+    keyboardClose: true
+  };
 
   constructor(
     private modal: ModalController,
     private loading: LoadingController,
     private toast: ToastController
-  ) {}
+  ) { }
 
   public async showModal(modalPage: any, props = {}): Promise<any> {
     const modal = await this.modal.create({
@@ -30,8 +40,7 @@ export class UiService {
     if (this.isLoading) {
       this.loading.dismiss();
     }
-    this.isLoading = await this.loading.create({
-    });
+    this.isLoading = await this.loading.create(this.options);
     await this.isLoading.present();
   }
 
@@ -47,4 +56,5 @@ export class UiService {
     });
     await _toast.present();
   }
+
 }
