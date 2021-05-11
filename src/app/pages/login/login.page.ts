@@ -28,7 +28,7 @@ export class LoginPage implements OnInit {
     })}
 
   ngOnInit() {
-    if (this.authS.isLogged()) {
+    if (this.authS.isLogged() && this.authS.getUser().id != null) {
       this.router.navigate(['/'])
     }
   }
@@ -61,15 +61,5 @@ export class LoginPage implements OnInit {
     });
   }
 
-  /*
-  //______________OCULTAR MENU
-  ionViewDidEnter(): void {
-    this.menu.enable(false);
-  }
-  
-  ionViewDidLeave(): void {
-    this.menu.enable(true);
-  }
-  //______________OCULTAR MENU
-  */
+
 }

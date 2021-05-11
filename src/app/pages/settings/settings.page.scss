@@ -9,7 +9,7 @@ ion-toolbar {
     
 .title {
     font-family: MCoBold;
-    font-size: 35px;
+    font-size: 2.2rem;
     color: #f5f7fa;
     display: flex;
     justify-content: center;
@@ -25,8 +25,12 @@ ion-content {
 }
 
 .imgUser {
-    height: 80px;
-    width: 80px;
+    height: 5em;
+    width: 5em;
+    background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.4)),url('/assets/imgs/galleryf.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 ion-avatar img {
@@ -34,4 +38,9 @@ ion-avatar img {
     //width: 50px !important;
     //height: 50px !important;
     border: 2px solid rgb(0, 0, 0) !important;
+}
+
+.box {
+  padding: 0.5em;
+  text-align: justify;
 }

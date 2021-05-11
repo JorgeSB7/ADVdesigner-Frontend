@@ -45,17 +45,19 @@
         </ion-col>
       </ion-row>
 
-      <ion-row class="pprow">
-        <ion-col class="border1N" size="4">
-          {{'Mname.title' | translate}}
-        </ion-col>
-        <ion-col class="border2N" size="8">
+      <ion-row style="padding-right: 7px; padding-left: 7px; text-align: center;">
+        <ion-col style="font-family: MCoBold; font-size: 2rem;">
           {{character.namecharacter}}
         </ion-col>
       </ion-row>
 
+      <ion-row>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+
       <ion-row class="pprow">
-        <ion-col class="borderE3">
+        <ion-col class="borderE4">
           {{'Mrace.title' | translate}}
           ({{character.race}})
         </ion-col>
@@ -64,6 +66,14 @@
       <ion-row class="pprow">
         <ion-col class="borderE2">
           {{this.loreRaza}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pprow">
+        <ion-col style="display: flex; align-items: center; justify-content: center; height: 18em;">
+          <iframe [src]="urlSafe2"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            style="width: 100%; height: 100%;"></iframe>
         </ion-col>
       </ion-row>
 
@@ -205,9 +215,20 @@
       <ion-row class="pprow">
         <ion-col class="borderE2">
           {{this.aux2}}
+          {{this.aux3}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="pprow">
+        <ion-col style="display: flex; align-items: center; justify-content: center; height: 18em;">
+          <iframe [src]="urlSafe"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            style="width: 100%; height: 100%;"></iframe>
         </ion-col>
       </ion-row>
 
     </ion-grid>
   </div>
+
+
 </ion-content>

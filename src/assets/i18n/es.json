@@ -196,5 +196,14 @@
   },
   "music": {
     "title": "MÚSICA"
+  },
+  "ayudaH": {
+    "title": "Ayuda"
+  },
+  "textoH": {
+    "title": "Si necesita asistencia de cualquier tipo no dude en contactar con el"
+  },
+  "adm": {
+    "title": "administrador"
   }
 }

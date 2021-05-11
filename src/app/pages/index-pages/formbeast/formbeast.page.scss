@@ -1,5 +1,5 @@
 ion-content {
-    --background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)),url('/assets/imgs/fondoIS.jpg');
+    --background: linear-gradient(rgba(255,255,255,0.7),rgba(255,255,255,0.7)),url('/assets/imgs/bestiary/ForestB.jpg');
     --background-position: center top;
     --background-repeat: repeat-y;
     --background-size: cover;
@@ -16,7 +16,7 @@ ion-toolbar {
   
 .title {
     font-family: MCoBold;
-    font-size: 35px;
+    font-size: 2.2rem;
     color: #f5f7fa;
     display: flex;
     justify-content: center;
@@ -25,24 +25,24 @@ ion-toolbar {
 }
 
 .borderA {
-    border: 2px solid rgb(21, 146, 100);
+    border: 2px solid rgb(7, 70, 38);
 }
 
 .borderB {
-    border-left: 2px solid rgb(21, 146, 100);
-    border-right: 2px solid rgb(21, 146, 100);
-    border-bottom: 2px solid rgb(21, 146, 100);
+    border-left: 2px solid rgb(7, 70, 38);
+    border-right: 2px solid rgb(7, 70, 38);
+    border-bottom: 2px solid rgb(7, 70, 38);
 }
 
 .borderC {
-    border-right: 2px solid rgb(21, 146, 100);
-    border-bottom: 2px solid rgb(21, 146, 100);
+    border-right: 2px solid rgb(7, 70, 38);
+    border-bottom: 2px solid rgb(7, 70, 38);
 }
 
 .borderD {
-    border-left: 2px solid rgb(21, 146, 100);
-    border-right: 2px solid rgb(21, 146, 100);
-    border-bottom: 2px solid rgb(21, 146, 100);
+    border-left: 2px solid rgb(7, 70, 38);
+    border-right: 2px solid rgb(7, 70, 38);
+    border-bottom: 2px solid rgb(7, 70, 38);
 }
 
 .borderImg {

@@ -142,7 +142,6 @@ export class CampaignsPage implements OnInit {
       console.log(err);
       await this.ui.hideLoading();
       await this.ui.showToast(err.error, "danger");
-      console.log("ERRORRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR")
     }
   }
 

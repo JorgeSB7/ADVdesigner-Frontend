@@ -37,8 +37,8 @@
   <ion-list>
     <!-- EDITAR -->
     <ion-item-sliding *ngFor="let campaign of campanias">
-      <ion-item-options side="start" (ionSwipe)="editCampaign(campaign)">
-        <ion-item-option color="primary" (click)="editCampaign(campaign)">
+      <ion-item-options side="start" (ionSwipe)="edit(campaign)">
+        <ion-item-option color="primary" (click)="edit(campaign)">
           <ion-icon slot="icon-only" name="create"></ion-icon>
         </ion-item-option>
       </ion-item-options>

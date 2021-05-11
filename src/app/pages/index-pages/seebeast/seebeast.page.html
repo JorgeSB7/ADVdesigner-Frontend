@@ -30,10 +30,10 @@
     <ion-grid style="font-size: 12px;">
 
       <ion-row>
-        <ion-col size="2">
+        <ion-col size="1">
         </ion-col>
 
-        <ion-col style="width: 100%; height: 100%;" size="8">
+        <ion-col style="width: 100%; height: 100%;" size="10">
           <div class="borderImg">
             <ion-thumbnail style="width: 100%; height: 100%; border-radius: 15% !important;">
               <ion-img src={{this.beast.imageb}}></ion-img>
@@ -41,16 +41,18 @@
           </div>
         </ion-col>
 
-        <ion-col size="2">
+        <ion-col size="1">
         </ion-col>
       </ion-row>
 
-      <ion-row style="padding-right: 7px; padding-left: 7px;">
-        <ion-col class="border1N" size="4">
-          {{'Mname.title' | translate}}
-        </ion-col>
-        <ion-col class="border2N" size="8">
+      <ion-row style="padding-right: 7px; padding-left: 7px; text-align: center;">
+        <ion-col style="font-family: MCoBold; font-size: 2rem;">
           {{beast.namebeast}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
         </ion-col>
       </ion-row>
 
@@ -71,7 +73,7 @@
       </ion-row>
 
       <ion-row style="padding-right: 7px; padding-left: 7px;">
-        <ion-col class="border5N">
+        <ion-col class="border3N" style="background-color: rgb(7, 70, 38);">
           {{'Rango.title' | translate}}
           ({{this.aux2}})
         </ion-col>
@@ -90,8 +92,13 @@
           {{beast.life}}ps
         </ion-col>
       </ion-row>
+
+      <ion-row>
+        <ion-col></ion-col>
+      </ion-row>
+
       <ion-row style="padding-right: 7px; padding-left: 7px;">
-        <ion-col class="border5N">
+        <ion-col class="border3N" style="background-color: rgb(7, 70, 38);">
           {{'Tipo.title' | translate}}
           ({{beast.type}})
         </ion-col>

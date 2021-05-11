@@ -9,7 +9,7 @@ ion-toolbar {
 
 .title {
     font-family: MCoBold;
-    font-size: 35px;
+    font-size: 2.2rem;
     color: #f5f7fa;
     display: flex;
     justify-content: center;
@@ -25,23 +25,6 @@ ion-toolbar {
     //background-size: cover;
 }
 
-.border1N {
-    border: 1px solid #7f4b10;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    background-color: rgb(243, 199, 149);
-}
-  
-.border2N {
-    border-left: 1px solid #7f4b10;
-    border-right: 1px solid #7f4b10;
-    text-align: center;
-    padding: 10px;
-    font-weight: bold;
-    background-color: rgb(238, 242, 245);
-}
-
 .border3N {
     border-left: 1px solid #7f4b10;
     border-right: 1px solid #7f4b10;
@@ -49,7 +32,8 @@ ion-toolbar {
     text-align: center;
     padding: 10px;
     font-weight: bold;
-    background-color: rgb(243, 199, 149);
+    background-color: #7f4b10;
+    color: white;
 }
 
 .border4N {

@@ -119,8 +119,10 @@ export class SeebeastPage implements OnInit {
     } else if (this.beast.power >= 80 && this.beast.power < 90) {
       this.aux2 = "Maestro"
     } else if (this.beast.power >= 70 && this.beast.power < 80) {
-      this.aux2 = "Difícil"
+      this.aux2 = "Experto"
     } else if (this.beast.power >= 45 && this.beast.power < 70) {
+      this.aux2 = "Difícil"
+    } else if (this.beast.power >= 25 && this.beast.power < 45) {
       this.aux2 = "Medio"
     } else if (this.beast.power >= 5 && this.beast.power < 25) {
       this.aux2 = "Fácil"

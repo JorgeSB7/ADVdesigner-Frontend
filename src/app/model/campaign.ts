@@ -5,6 +5,6 @@ export interface campaign {
     namecampaign:string,
     picture?:string,
     description:string,
-    characters?:character[],
+    cha?:character[],
     contras?:any
 }

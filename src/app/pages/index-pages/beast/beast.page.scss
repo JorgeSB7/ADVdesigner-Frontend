@@ -9,7 +9,7 @@ ion-toolbar {
 
 .title {
     font-family: MCoBold;
-    font-size: 35px;
+    font-size: 2.2rem;
     color: #f5f7fa;
     display: flex;
     justify-content: center;
@@ -18,43 +18,42 @@ ion-toolbar {
 }
 
 .border1N {
-    border-top: 2px solid rgb(21, 146, 100);
-    border-left: 2px solid rgb(21, 146, 100);
+    border-top: 2px solid rgb(7, 70, 38);
+    border-left: 2px solid rgb(7, 70, 38);
     text-align: center;
     padding: 5;
     font-weight: bold;
-    background-color: rgb(66, 248, 182);
+    background-color: rgb(7, 70, 38);
+    color: white;
 }
   
 .border2N {
-    border-top: 2px solid rgb(21, 146, 100);
-    border-left: 2px solid rgb(21, 146, 100);
-    border-right: 2px solid rgb(21, 146, 100);
+    border-top: 2px solid rgb(7, 70, 38);
+    border-left: 2px solid rgb(7, 70, 38);
+    border-right: 2px solid rgb(7, 70, 38);
     text-align: center;
     padding: 5;
     font-weight: bold;
 }
   
 .borderA {
-    border: 2px solid rgb(21, 146, 100);
+    border: 2px solid rgb(7, 70, 38);
     text-align: center;
     font-weight: bold;
-    background-color: rgb(66, 248, 182);
+    background-color: rgb(14, 126, 70);
+    color: white;
+    font-size: 0.6rem;
 }
   
 .borderB {
-    border-top: 2px solid rgb(21, 146, 100);
-    border-bottom: 2px solid rgb(21, 146, 100);
+    border-top: 2px solid rgb(7, 70, 38);
+    border-right: 2px solid rgb(7, 70, 38);
+    border-bottom: 2px solid rgb(7, 70, 38);
     text-align: center;
-}
-  
-.borderC {
-    border-top: 2px solid rgb(21, 146, 100);
-    border-bottom: 2px solid rgb(21, 146, 100);
-    border-left: 2px solid rgb(21, 146, 100);
-    text-align: center;
+    background-color: rgb(14, 126, 70);
+    color: white;
     font-weight: bold;
-    background-color: rgb(66, 248, 182);
+    font-size: 0.6rem;
 }
   
 .borderD {

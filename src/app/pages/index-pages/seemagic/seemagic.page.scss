@@ -16,7 +16,7 @@ ion-content {
 
 .title {
     font-family: MCoBold;
-    font-size: 35px;
+    font-size: 2.2rem;
     color: #f5f7fa;
     display: flex;
     justify-content: center;
@@ -32,26 +32,10 @@ ion-content {
     //background-size: cover;
 }
 
-.border1N {
-    border: 2px solid rgb(2, 20, 179);
-    text-align: center;
-    padding: auto;
-    font-weight: bold;
-    background-color: rgb(244, 200, 255);
-}
-  
-.border2N {
-    border-right: 2px solid rgb(2, 20, 179);
-    border-bottom: 2px solid rgb(2, 20, 179);
-    border-top: 2px solid rgb(2, 20, 179);
-    text-align: center;
-    padding: auto;
-    background-color: rgb(238, 242, 245);
-}
-
 .border3N {
     border-left: 2px solid rgb(2, 20, 179);
     border-right: 2px solid rgb(2, 20, 179);
+    border-top: 2px solid rgb(2, 20, 179);
     text-align: center;
     padding: auto;
     font-weight: bold;
@@ -61,7 +45,7 @@ ion-content {
 .border4N {
     border: 2px solid rgb(2, 20, 179);
     text-align: center;
-    padding: auto;
+    padding: 1em;
     background-color: rgb(238, 242, 245);
 }
 

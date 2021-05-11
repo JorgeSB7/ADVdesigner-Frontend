@@ -196,5 +196,14 @@
   },
   "music": {
     "title": "MUSIC"
+  },
+  "ayudaH": {
+    "title": "Help"
+  },
+  "textoH": {
+    "title": "If you need assistance of any kind, do not hesitate to contact the"
+  },
+  "adm": {
+    "title": "administrator"
   }
 }

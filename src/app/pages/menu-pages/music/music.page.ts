@@ -13,8 +13,21 @@ export interface Track {
   styleUrls: ['./music.page.scss'],
 })
 export class MusicPage implements OnDestroy {
+  tf = false;
 
   playlist: Track[] = [
+    {
+      name: 'Batalla épica',
+      path: './assets/mp3/Batalla épica.mp3'
+    },
+    {
+      name: 'Canción de taberna',
+      path: './assets/mp3/Canción de taberna.mp3'
+    },
+    {
+      name: 'Tras la batalla',
+      path: './assets/mp3/Tras la batalla.mp3'
+    },
     {
       name: 'bensound-creativeminds',
       path: './assets/mp3/bensound-creativeminds.mp3'
@@ -22,6 +35,10 @@ export class MusicPage implements OnDestroy {
     {
       name: 'bensound-littleidea',
       path: './assets/mp3/bensound-littleidea.mp3'
+    },
+    {
+      name: 'bensound-funnysong',
+      path: './assets/mp3/bensound-funnysong.mp3'
     }
   ];
 
@@ -50,7 +67,6 @@ export class MusicPage implements OnDestroy {
       },
       onend: () => {
         console.log('onend');
-
       }
     });
     this.player.play();
@@ -60,12 +76,14 @@ export class MusicPage implements OnDestroy {
     this.isPlaying = !pause;
     if (pause) {
       this.player.pause();
+      this.tf = true;
     } else {
       this.player.play();
     }
   }
 
   next() {
+    this.tf = false;
     let index = this.playlist.indexOf(this.activeTrack);
     if (index != this.playlist.length - 1) {
       this.start(this.playlist[index + 1]);
@@ -75,6 +93,7 @@ export class MusicPage implements OnDestroy {
   }
 
   prev() {
+    this.tf = false;
     let index = this.playlist.indexOf(this.activeTrack);
     if (index > 0) {
       this.start(this.playlist[index - 1]);
