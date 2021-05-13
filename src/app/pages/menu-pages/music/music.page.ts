@@ -79,6 +79,7 @@ export class MusicPage implements OnDestroy {
       this.tf = true;
     } else {
       this.player.play();
+      this.tf = false;
     }
   }
 

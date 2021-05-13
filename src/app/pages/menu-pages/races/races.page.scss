@@ -23,25 +23,26 @@ ion-slides {
 }
 
 .img {
-  height: 390px !important;
-  width: 390px !important;
+  height: 21em !important;
+  width: 21em !important;
 }
 
 .race {
   font-family: dum1;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.1rem;
   margin-top: 10px;
+  color: rgb(37, 37, 37);
 }
 
 .text {
   padding-top: 9px;
-  font-size: 14px;
+  font-size: 0.85rem;
   color: black;
 }
 
 .box {
-  border-radius: 5% !important;
+  border-radius: 15px !important;
   width: 90% !important;
   height: 90% !important;
   border: 1px solid rgb(0, 0, 0) !important;

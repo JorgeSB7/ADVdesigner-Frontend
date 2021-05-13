@@ -54,6 +54,7 @@ export class SeecharacterPage implements OnInit {
     this.sab = this.bonus(this.character.wisdom);
     this.car = this.bonus(this.character.charisma);
 
+    // Para evitar el error (UNSAFE VALUE USED IN A RESOURCE URL CONTEXT)
     this.urlSafe= this.sanitizer.bypassSecurityTrustResourceUrl(this.aux3);
     this.urlSafe2= this.sanitizer.bypassSecurityTrustResourceUrl(this.aux4);
   }

@@ -46,7 +46,7 @@
       </ion-row>
 
       <ion-row style="padding-right: 7px; padding-left: 7px; text-align: center;">
-        <ion-col style="font-family: MCoBold; font-size: 2rem;">
+        <ion-col style="font-family: MCoBold; font-size: 2rem; color: black;">
           {{campaign.namecampaign}}
         </ion-col>
       </ion-row>
@@ -65,6 +65,19 @@
       <ion-row style="padding-right: 7px; padding-left: 7px;">
         <ion-col class="border4N" size="12">
           {{campaign.description}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col style="display: flex; align-items: center; justify-content: center; height: 18em;">
+          <iframe [src]="urlSafeC"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+            style="width: 100%; height: 100%;"></iframe>
         </ion-col>
       </ion-row>
 

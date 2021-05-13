@@ -22,9 +22,8 @@ ion-toolbar {
     border-left: 1px solid #7f4b10;
     border-bottom: 1px solid #7f4b10;
     text-align: center;
-    padding: 5px;
     font-weight: bold;
-    background-color: rgb(243, 199, 149);
+    background-color: #7f4b10;
   }
   
   .border2N {
@@ -33,6 +32,11 @@ ion-toolbar {
     border-right: 1px solid #7f4b10;
     border-bottom: 1px solid #7f4b10;
     text-align: center;
-    padding: 5px;
-    font-weight: bold;
+    background-color: rgb(243, 199, 149);
+    font-family: MCoBold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: black;
   }
