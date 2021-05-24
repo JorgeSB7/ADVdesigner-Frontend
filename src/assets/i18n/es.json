@@ -205,5 +205,8 @@
   },
   "adm": {
     "title": "administrador"
+  },
+  "time": {
+    "title": "TIEMPO DE JUEGO"
   }
 }

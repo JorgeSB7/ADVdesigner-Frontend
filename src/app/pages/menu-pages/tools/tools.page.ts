@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalController, ToastController } from '@ionic/angular';
 import { UiService } from 'src/app/services/ui.service';
 
@@ -8,6 +8,7 @@ import { UiService } from 'src/app/services/ui.service';
   styleUrls: ['./tools.page.scss'],
 })
 export class ToolsPage implements OnInit {
+  @Input("value") value;
   private result;
   private events: string[];
   private event: string;
@@ -18,9 +19,11 @@ export class ToolsPage implements OnInit {
   private resultEND: any;
 
   constructor(public ui: UiService,
-    private toast: ToastController) { }
+    private toast: ToastController,
+    private modalController: ModalController) { }
 
   ngOnInit() {
+    console.log(this.value);
   }
 
   public async diceToast(msg: string) {
@@ -121,6 +124,10 @@ export class ToolsPage implements OnInit {
     this.treasures = ["ORO", "OBJETO MÁGICO", "ARMA", "ARMADURA", "ALIADO", "NADA", "MALDICIÓN", "MAPA"];
     this.treasure = this.treasures[result],
       this.oToast(this.treasure);
+  }
+
+  public exit() {
+    this.modalController.dismiss();
   }
 
 }

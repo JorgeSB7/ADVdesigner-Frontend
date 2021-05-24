@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
+    <ion-buttons slot="start" *ngIf="value == null">
       <ion-menu-button menu="custom" style="zoom:1.5"></ion-menu-button>
     </ion-buttons>
     <ion-grid>
@@ -10,6 +10,9 @@
         </ion-col>
 
         <ion-col size="7" style="text-align:center !important" class="title">
+          <ion-button (click)="this.exit()" style="--border-radius: 100% !important; margin-right: 10%;" *ngIf="value != null">
+            <ion-icon name="arrow-undo-outline" style="color: black;"></ion-icon>
+          </ion-button>
           <ion-label>{{'music.title' | translate}}</ion-label>
         </ion-col>
 
@@ -17,7 +20,7 @@
         </ion-col>
 
         <ion-col size="3" style="text-align:center !important">
-          <ion-button routerLink="/home" style="--border-radius: 100% !important;">
+          <ion-button routerLink="/home" style="--border-radius: 100% !important;" *ngIf="value == null">
             <ion-icon name="home" style="color: black;"></ion-icon>
           </ion-button>
         </ion-col>

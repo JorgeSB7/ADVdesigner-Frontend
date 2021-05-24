@@ -74,13 +74,60 @@
       </ion-row>
 
       <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="border3N">
+          {{'time.title' | translate}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="crono">
+          {{_minutos}}:{{_segundos}}.{{_centesimas}}
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="cronoButtonsA">
+          <ion-icon [name]=estado (click)="estadoSwap()" style="font-size: 2rem;"></ion-icon>
+        </ion-col>
+        <ion-col class="cronoButtonsB">
+          <ion-icon [color]=refreshColor name="refresh" (click)="stop()" style="font-size: 2rem;"></ion-icon>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="border3N">
+          {{'tools.title' | translate}}
+        </ion-col>
+        <ion-col class="border3N">
+          {{'music.title' | translate}}
+        </ion-col>
+      </ion-row>
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
+        <ion-col class="cronoButtonsA">
+          <ion-button (click)="this.seeTools()" style="--border-radius: 100% !important;" color="secondary">
+            <ion-icon src="assets/imgs/dado.svg" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col class="cronoButtonsB">
+          <ion-button (click)="this.seeMusic()" style="--border-radius: 100% !important;" color="secondary">
+            <ion-icon src="assets/imgs/guitarra.svg" style="color: black;"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="padding-right: 7px; padding-left: 7px;">
         <ion-col style="display: flex; align-items: center; justify-content: center; height: 18em;">
-          <iframe [src]="urlSafeC"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
-            style="width: 100%; height: 100%;"></iframe>
+          <iframe [src]="urlSafeC" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen style="width: 100%; height: 100%;"></iframe>
         </ion-col>
       </ion-row>
 
     </ion-grid>
   </div>
+
 </ion-content>

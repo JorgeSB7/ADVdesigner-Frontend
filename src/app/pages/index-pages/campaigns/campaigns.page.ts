@@ -23,7 +23,6 @@ export class CampaignsPage implements OnInit {
     private auth: AuthService) { }
 
   ngOnInit() {
-    
   }
 
   async ionViewDidEnter() {

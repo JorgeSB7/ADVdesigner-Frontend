@@ -28,7 +28,7 @@ export class LoginPage implements OnInit {
     })}
 
   ngOnInit() {
-    if (this.authS.isLogged() && this.authS.getUser().id != null) {
+    if (this.authS.isLogged() && this.authS.getUser().id != null && this.authS.getUser().id != -1) {
       this.router.navigate(['/'])
     }
   }

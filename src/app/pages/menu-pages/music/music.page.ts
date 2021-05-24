@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { IonRange } from '@ionic/angular';
+import { Component, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { IonRange, ModalController } from '@ionic/angular';
 import { Howl, Howler } from 'howler';
 
 export interface Track {
@@ -14,6 +14,7 @@ export interface Track {
 })
 export class MusicPage implements OnDestroy {
   tf = false;
+  @Input("value") value;
 
   playlist: Track[] = [
     {
@@ -48,9 +49,11 @@ export class MusicPage implements OnDestroy {
   progress = 0;
   @ViewChild('range', { static: false }) range: IonRange;
 
-  constructor() { }
+  constructor(private modalController: ModalController) { }
   ngOnDestroy(): void {
-    this.player.stop();
+    if (this.player) {
+      this.player.stop();
+    }
   }
 
   start(track: Track) {
@@ -115,6 +118,10 @@ export class MusicPage implements OnDestroy {
     setTimeout(() => {
       this.updateProgress();
     }, 1000)
+  }
+
+  public exit() {
+    this.modalController.dismiss();
   }
 
 }

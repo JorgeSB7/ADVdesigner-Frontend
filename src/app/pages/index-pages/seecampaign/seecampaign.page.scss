@@ -56,3 +56,33 @@ ion-content {
     --background-repeat: repeat-y;
     --background-size: cover;
 }
+
+.crono {
+    border: 1px solid #7f4b10;
+    text-align: center;
+    padding: 0.3em;
+    font-size: 1.5rem;
+    background-color: rgb(238, 242, 245);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cronoButtonsA {
+    border-bottom: 1px solid #7f4b10;
+    border-left: 1px solid #7f4b10;
+    text-align: center;
+    background-color: rgb(238, 242, 245);
+    color: black;
+    padding: 0.3em;
+}
+
+.cronoButtonsB {
+    border-bottom: 1px solid #7f4b10;
+    border-right: 1px solid #7f4b10;
+    text-align: center;
+    background-color: rgb(238, 242, 245);
+    color: black;
+    padding: 0.3em;
+}

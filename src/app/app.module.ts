@@ -31,7 +31,6 @@ import { File } from '@ionic-native/file/ngx';
 import { FileTransfer} from '@ionic-native/file-transfer/ngx';
 import { FileOpener } from '@ionic-native/file-opener/ngx';
 
-
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -53,6 +52,7 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     AppRoutingModule,
     FormsModule,
+    
     ReactiveFormsModule],
   providers: [
     UiService,

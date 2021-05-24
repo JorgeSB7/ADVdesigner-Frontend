@@ -4,7 +4,6 @@ import { ModalController, NavParams } from '@ionic/angular';
 import { beast } from 'src/app/model/beast';
 import { AuthService } from 'src/app/services/auth.service';
 import { ImageaddService } from 'src/app/services/imageadd.service';
-import { UiService } from 'src/app/services/ui.service';
 
 @Component({
   selector: 'app-formbeast',
@@ -21,8 +20,7 @@ export class FormbeastPage {
     private formBuilder: FormBuilder,
     private navParams: NavParams,
     private authS: AuthService,
-    private gallery: ImageaddService,
-    private ui: UiService) {
+    private gallery: ImageaddService) {
 
     this.beast = this.navParams.get('beast');
     if (this.beast && this.beast.codeb) {
