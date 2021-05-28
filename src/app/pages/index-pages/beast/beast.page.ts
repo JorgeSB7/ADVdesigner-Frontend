@@ -4,6 +4,7 @@ import { beast } from 'src/app/model/beast';
 import { ApiBeastService } from 'src/app/services/api-beast.service';
 import { UiService } from 'src/app/services/ui.service';
 import { FormbeastPage } from '../formbeast/formbeast.page';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-beast',
@@ -37,7 +38,12 @@ export class BeastPage implements OnInit {
     } catch (err) {
       this.bestias = null; //vista
       await this.ui.hideLoading();
-      await this.ui.showToast(err.error, "danger");
+      Swal.fire({
+        icon: 'info',
+        title: 'Fallo del servidor',
+        text: 'Deslice hacia abajo para recargar los registros. Disculpe las molestias.',
+        footer: '<a href="mailto:ajosanchez@iesfranciscodelosrios.es">¿Necesita ayuda?</a>'
+      });
     }
   }
 
@@ -158,5 +164,17 @@ export class BeastPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  //____________________________CARGAR DATOS
+  public cargaDatos($event = null) {
+    try {
+      this.loadAll()
+      if ($event) {
+        $event.target.complete();
+      }
+    } catch (err) {
+      //Error
+    }
   }
 }

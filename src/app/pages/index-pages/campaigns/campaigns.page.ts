@@ -5,7 +5,7 @@ import { ApiCampaignService } from 'src/app/services/api-campaign.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { UiService } from 'src/app/services/ui.service';
 import { FormcampaignPage } from '../formcampaign/formcampaign.page';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-campaigns',
@@ -39,7 +39,12 @@ export class CampaignsPage implements OnInit {
     } catch (err) {
       this.campanias = null; //vista
       await this.ui.hideLoading();
-      await this.ui.showToast(err.error, "danger");
+      Swal.fire({
+        icon: 'info',
+        title: 'Fallo del servidor',
+        text: 'Deslice hacia abajo para recargar los registros. Disculpe las molestias.',
+        footer: '<a href="mailto:ajosanchez@iesfranciscodelosrios.es">¿Necesita ayuda?</a>'
+      });
     }
   }
 
@@ -170,5 +175,17 @@ export class CampaignsPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  //____________________________CARGAR DATOS
+  public cargaDatos($event = null) {
+    try {
+      this.loadAll()
+      if ($event) {
+        $event.target.complete();
+      }
+    } catch (err) {
+      //Error
+    }
   }
 }

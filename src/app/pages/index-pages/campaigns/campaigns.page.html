@@ -34,6 +34,11 @@
     <ion-searchbar #input showCancelButton="focus" debounce="500" (ionChange)="searchCampaign($event)"></ion-searchbar>
   </ion-toolbar>
 
+    <!-- CARGAR_DATOS -->
+    <ion-refresher slot="fixed" (ionRefresh)="this.cargaDatos($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+
   <ion-list>
     <!-- EDITAR -->
     <ion-item-sliding *ngFor="let campaign of campanias">

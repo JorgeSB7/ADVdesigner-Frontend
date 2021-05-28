@@ -34,6 +34,11 @@
     <ion-searchbar #input showCancelButton="focus" debounce="500" (ionChange)="searchMagic($event)"></ion-searchbar>
   </ion-toolbar>
 
+  <!-- CARGAR_DATOS -->
+  <ion-refresher slot="fixed" (ionRefresh)="this.cargaDatos($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
   <ion-list>
     <!-- EDITAR -->
     <ion-item-sliding *ngFor="let magic of conjuros">
@@ -43,14 +48,15 @@
         </ion-item-option>
       </ion-item-options>
 
-      <!-- PERSONAJE -->
+      <!-- CONJURO -->
       <ion-item lines="none" (click)="this.seecha(magic)">
         <div style="width: 100%;">
 
           <ion-grid>
             <ion-row>
               <ion-col size="2">
-                <ion-icon name="arrow-forward-circle-outline" style="height: 100%; width: 100%; color: rgb(2, 20, 179);"></ion-icon>
+                <ion-icon name="arrow-forward-circle-outline"
+                  style="height: 100%; width: 100%; color: rgb(2, 20, 179);"></ion-icon>
               </ion-col>
               <ion-col size="10">
 

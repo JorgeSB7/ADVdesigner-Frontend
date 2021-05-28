@@ -4,6 +4,7 @@ import { magic } from 'src/app/model/magic';
 import { ApiMagicService } from 'src/app/services/api-magic.service';
 import { UiService } from 'src/app/services/ui.service';
 import { FormmagicPage } from '../formmagic/formmagic.page';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-magic',
@@ -37,7 +38,12 @@ export class MagicPage implements OnInit {
     } catch (err) {
       this.conjuros = null; //vista
       await this.ui.hideLoading();
-      await this.ui.showToast(err.error, "danger");
+      Swal.fire({
+        icon: 'info',
+        title: 'Fallo del servidor',
+        text: 'Deslice hacia abajo para recargar los registros. Disculpe las molestias.',
+        footer: '<a href="mailto:ajosanchez@iesfranciscodelosrios.es">¿Necesita ayuda?</a>'
+      });
     }
   }
 
@@ -159,4 +165,16 @@ export class MagicPage implements OnInit {
 
     await alert.present();
   }
+
+    //____________________________CARGAR DATOS
+    public cargaDatos($event = null) {
+      try {
+        this.loadAll()
+        if ($event) {
+          $event.target.complete();
+        }
+      } catch (err) {
+        //Error
+      }
+    }
 }

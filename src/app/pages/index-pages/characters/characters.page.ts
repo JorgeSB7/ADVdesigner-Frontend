@@ -4,6 +4,7 @@ import { character } from 'src/app/model/character';
 import { ApiCharacterService } from 'src/app/services/api-character.service';
 import { UiService } from 'src/app/services/ui.service';
 import { FormcharacterPage } from '../formcharacter/formcharacter.page';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-characters',
@@ -37,7 +38,12 @@ export class CharactersPage implements OnInit {
     } catch (err) {
       this.personajes = null; //vista
       await this.ui.hideLoading();
-      await this.ui.showToast(err.error, "danger");
+      Swal.fire({
+        icon: 'info',
+        title: 'Fallo del servidor',
+        text: 'Deslice hacia abajo para recargar los registros. Disculpe las molestias.',
+        footer: '<a href="mailto:ajosanchez@iesfranciscodelosrios.es">¿Necesita ayuda?</a>'
+      });
     }
   }
 
@@ -159,5 +165,17 @@ export class CharactersPage implements OnInit {
     });
 
     await alert.present();
+  }
+
+  //____________________________CARGAR DATOS
+  public cargaDatos($event = null) {
+    try {
+      this.loadAll()
+      if ($event) {
+        $event.target.complete();
+      }
+    } catch (err) {
+      //Error
+    }
   }
 }
